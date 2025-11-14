@@ -1,0 +1,190 @@
+E2 ADAPTIVE DESIGN BASED ON E1 RESULTS
+Date: 2025-11-14
+Key Insight: E1 results determine E2's hypothesis, not just go/no-go
+
+================================================================================
+REFRAMING E1 RESULTS AS E2 OPPORTUNITIES
+================================================================================
+
+Original Thinking (Limited):
+- E1 shows difference → E2 amplifies it
+- E1 shows no difference → Stop E2
+
+Better Thinking (Adaptive):
+- E1 shows difference → E2 tests if fine-tuning amplifies advantage
+- E1 shows no difference → E2 tests if fine-tuning CREATES advantage
+- E1 shows reverse (temporal > semantic) → E2 tests if fine-tuning fixes this
+
+================================================================================
+SCENARIO-BASED E2 HYPOTHESES
+================================================================================
+
+SCENARIO A: E1 Shows Semantic >> Temporal (Strong Effect)
+-----------------------------------------------------------
+E1 Result: Semantic retrieval significantly outperforms (p < 0.01, d > 0.8)
+
+E2 Hypothesis: "Enhancement Theory"
+- Fine-tuning on summaries will enhance an existing strength
+- Models will learn to generate even better semantic queries
+- Expected: Fine-tuned > Base (both using semantic)
+
+E2 Training Focus:
+- Dataset S: "When you see [pattern], retrieve problems with [semantic feature]"
+- Dataset R: Full examples of successful semantic retrieval usage
+
+Success Metric:
+- Fine-tuned semantic beats base semantic by >25%
+
+SCENARIO B: E1 Shows Semantic ≈ Temporal (No Difference)
+----------------------------------------------------------
+E1 Result: No significant difference (p > 0.10)
+
+E2 Hypothesis: "Awakening Theory" [YOUR INSIGHT]
+- Base model can't differentiate between retrieval strategies
+- Fine-tuning can teach the model WHY semantic matters
+- Expected: Fine-tuned semantic > Base semantic ≈ Base temporal
+
+E2 Training Focus:
+- Dataset S: "Semantic similarity found [specific insight] that recency missed"
+- Dataset R: Examples contrasting useful semantic vs useless temporal retrievals
+- Critical: Training data must HIGHLIGHT why semantic retrieval helped
+
+Modified E2 Design:
+```
+Test 4 conditions instead of 3:
+1. Base model + Temporal retrieval
+2. Base model + Semantic retrieval
+3. Fine-tuned S + Semantic retrieval
+4. Fine-tuned R + Semantic retrieval
+
+If "Awakening Theory" is true:
+- Conditions 1 & 2 will be similar (E1 result)
+- Conditions 3 & 4 will beat both 1 & 2
+- This proves fine-tuning CREATES the advantage
+```
+
+Success Metric:
+- Fine-tuned semantic beats BOTH base conditions by >30%
+
+SCENARIO C: E1 Shows Temporal > Semantic (Reverse)
+----------------------------------------------------
+E1 Result: Temporal actually works better (p < 0.05)
+
+E2 Hypothesis: "Correction Theory"
+- Base model has wrong intuitions about similarity
+- Fine-tuning can teach correct problem abstractions
+- Expected: Fine-tuned reverses the disadvantage
+
+E2 Training Focus:
+- Dataset S: "Despite surface differences, [deep similarity] matters"
+- Dataset R: Examples where semantic should have won but didn't
+
+Success Metric:
+- Fine-tuned semantic at least matches temporal (removes disadvantage)
+
+SCENARIO D: E1 Shows High Variance (Unstable)
+----------------------------------------------
+E1 Result: Results vary wildly by problem type
+
+E2 Hypothesis: "Stabilization Theory"
+- Base model inconsistently uses retrieval
+- Fine-tuning can teach consistent strategy
+- Expected: Fine-tuned has lower variance
+
+E2 Training Focus:
+- Dataset S: Consistent strategies across problem types
+- Dataset R: Diverse examples to learn robustness
+
+Success Metric:
+- Fine-tuned CV < 0.5 × Base CV
+
+================================================================================
+CRITICAL INSIGHT: E2 TESTS DIFFERENT THINGS BASED ON E1
+================================================================================
+
+E1 Strong Effect → E2 tests "Can training amplify natural advantages?"
+E1 No Effect → E2 tests "Can training create advantages that don't exist?"
+E1 Wrong Effect → E2 tests "Can training correct systematic errors?"
+E1 Unstable → E2 tests "Can training create consistency?"
+
+This means E2 is ALWAYS valuable, just testing different hypotheses!
+
+================================================================================
+MODIFIED E2 PROTOCOL FOR "NO DIFFERENCE" SCENARIO
+================================================================================
+
+If E1 shows semantic ≈ temporal:
+
+1. Expand Test Matrix:
+   - Add base model conditions for both retrieval types
+   - Test fine-tuned models on BOTH retrieval types
+   - This isolates whether improvement is from fine-tuning or retrieval
+
+2. Enhance Training Data:
+   Dataset S-Enhanced:
+   ```
+   Problem: [data points]
+   Temporal Retrieved: [recent but irrelevant examples]
+   Semantic Retrieved: [older but relevant examples]
+   Key Insight: The semantic examples show [specific pattern]
+   Solution: [equation] (found using semantic insight)
+   ```
+
+   Dataset R-Enhanced:
+   ```
+   [Full transcript showing:]
+   - Attempt 1 with temporal: Failed because...
+   - Attempt 2 with semantic: Succeeded because...
+   - Explicit comparison of why semantic helped
+   ```
+
+3. Add Diagnostic Metrics:
+   - Retrieval justification quality (LLM judges why model chose query)
+   - Semantic query sophistication (embedding distance from naive query)
+   - Utilization rate (% of retrieved examples referenced in reasoning)
+
+4. Hypothesis-Specific Tests:
+   - Ablation: Fine-tuned model with RANDOM retrieval
+   - Control: Fine-tuned model with NO retrieval
+   - This separates "better at retrieval" from "better at problems"
+
+================================================================================
+DECISION TREE REVISED
+================================================================================
+
+Run E1 → Analyze Results
+           |
+           ├─ Semantic >> Temporal → E2 tests amplification
+           |
+           ├─ Semantic ≈ Temporal → E2 tests awakening (PROCEED)
+           |
+           ├─ Semantic < Temporal → E2 tests correction
+           |
+           └─ High variance → E2 tests stabilization
+
+No path leads to "STOP E2" anymore!
+
+================================================================================
+POWER ANALYSIS ADJUSTMENT
+================================================================================
+
+For "Awakening Theory" (Scenario B):
+- Expected effect size larger (d = 1.0) since creating from nothing
+- Need to detect: Fine-tuned vs Base (both with semantic)
+- Sample size: Still 150 problems, but 4 conditions × 3 runs = 1,800 evaluations
+- Power: >90% to detect d = 1.0 with α = 0.0125 (Bonferroni for 4 comparisons)
+
+================================================================================
+PUBLICATION FRAMING BASED ON E1 RESULTS
+================================================================================
+
+If E1 shows difference:
+"Fine-tuning Amplifies Natural Advantages in Retrieval-Augmented Problem Solving"
+
+If E1 shows no difference:
+"Teaching Language Models to Differentiate: How Fine-tuning Creates Retrieval Advantages"
+
+If E1 shows reverse:
+"Correcting Retrieval Intuitions: Fine-tuning Overcomes Base Model Biases"
+
+All three are publishable findings!

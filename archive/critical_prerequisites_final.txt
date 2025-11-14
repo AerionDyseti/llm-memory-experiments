@@ -1,0 +1,103 @@
+CRITICAL PREREQUISITES - FINAL SUMMARY
+Date: 2025-11-14
+Purpose: Clear distinction between "must pass" vs "shapes hypothesis"
+
+================================================================================
+ABSOLUTE BLOCKERS (Must Pass or Everything Stops)
+================================================================================
+
+These THREE tests could invalidate the entire research program:
+
+1. EMBEDDING VALIDITY [3 hours]
+--------------------------------
+Test: Can embeddings distinguish equation types?
+Pass Criteria: Similarity ratio > 1.2
+Fail Action: FULL STOP - Redesign similarity metric
+
+Why Fatal: If similarity is random, "semantic retrieval" is meaningless
+
+2. RETRIEVAL UTILITY [4 hours]
+-------------------------------
+Test: Does ANY retrieval help vs no retrieval?
+Pass Criteria: At least one method p < 0.05
+Fail Action: FULL STOP - Investigate why examples don't help
+
+Why Fatal: If examples don't help at all, comparing retrieval strategies is pointless
+
+3. FINE-TUNING PRESERVATION [3 hours]
+--------------------------------------
+Test: Does LoRA preserve base capabilities?
+Pass Criteria: Retains >80% performance on benchmarks
+Fail Action: FULL STOP - Adjust training approach
+
+Why Fatal: If fine-tuning destroys reasoning, can't test if it improves intuition
+
+================================================================================
+HYPOTHESIS SHAPERS (Change E2's Question, Don't Block It)
+================================================================================
+
+E1 RESULTS shape E2's hypothesis but don't block it:
+
+E1 Result                    → E2 Tests
+-----------------------------------------
+Semantic >> Temporal         → Can fine-tuning AMPLIFY advantages?
+Semantic ≈ Temporal          → Can fine-tuning CREATE advantages?
+Semantic < Temporal          → Can fine-tuning CORRECT mistakes?
+High variance                → Can fine-tuning STABILIZE strategies?
+
+NONE of these stop E2, they just change what E2 is testing!
+
+================================================================================
+MINIMUM VIABLE PATH TO E2
+================================================================================
+
+Day 1 Morning: Run Critical Prerequisites (10 hours total)
+- [ ] Embedding Validity (3 hrs)
+- [ ] Retrieval Utility (4 hrs)
+- [ ] Fine-tuning Preservation (3 hrs)
+- DECISION POINT: All pass? Continue. Any fail? Stop and redesign.
+
+Day 2-3: Run E1 Experiment (2 days)
+- [ ] Full E1 with semantic vs temporal vs none
+- [ ] Analyze results
+- DECISION POINT: Use results to choose E2 hypothesis (don't stop!)
+
+Day 4: Adapt E2 Design (4 hours)
+- [ ] Based on E1 results, choose training data focus
+- [ ] If E1 shows no difference, expand to 4 conditions
+- [ ] Generate appropriate training datasets
+
+Day 5-7: Run E2 Experiment (3 days)
+- [ ] Fine-tune models
+- [ ] Run evaluation
+- [ ] Analyze based on chosen hypothesis
+
+Total: 7 days from start to E2 results
+
+================================================================================
+THE KEY INSIGHT
+================================================================================
+
+Traditional thinking:
+"E1 must show semantic > temporal, or E2 is invalid"
+
+Better thinking:
+"E1 tells us WHAT E2 should test, not WHETHER to test"
+
+This makes the research anti-fragile:
+- Any E1 result leads to an interesting E2 question
+- "Null" results in E1 make E2 MORE interesting (can training create advantages?)
+- The research program can't fail, only pivot
+
+================================================================================
+SINGLE CRITICAL DECISION RULE
+================================================================================
+
+After running the three absolute blockers, ask:
+
+"Can the model use information from examples to improve performance?"
+
+YES → Proceed with full experiment chain
+NO → Stop and investigate why (this would be surprising and important!)
+
+Everything else is adaptation, not cancellation.

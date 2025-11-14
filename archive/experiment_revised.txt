@@ -1,0 +1,337 @@
+Project: The "Scientist Agent" Memory Experiment (REVISED)
+Date: 2025-11-14
+Authors: User & Assistant
+
+================================================================================
+1. EXECUTIVE SUMMARY
+================================================================================
+
+1.1. Overall Objective
+---------------------
+To scientifically measure and validate the impact of two distinct memory systems
+on an LLM agent's problem-solving efficiency:
+
+- Focused Memory (Mid-Term): Semantic retrieval vs. temporal retrieval vs. no memory
+- Distilled Intuition (Long-Term): Fine-tuning on distilled summaries vs. raw logs
+
+1.2. Core Research Questions
+---------------------------
+E1: Does semantic retrieval improve problem-solving efficiency compared to
+    temporal retrieval or no memory, when controlling for the amount of information?
+
+E2: Can fine-tuning improve an agent's ability to use RAG memory effectively,
+    and which training data format (distilled vs. raw) provides better
+    cost-efficiency trade-offs?
+
+1.3. Key Methodological Improvements
+------------------------------------
+- Added no-memory baseline condition
+- Controlled for number of retrieved examples (not just tokens)
+- Pre-specified success criteria with multiple comparison corrections
+- Added power analysis and sample size justification
+- Included reproducibility controls (seeds, multiple runs)
+- Specified exact training procedures and validation metrics
+
+================================================================================
+2. EXPERIMENT 1: MEMORY RETRIEVAL STRATEGIES
+================================================================================
+
+2.1. Objective
+--------------
+Test whether semantic retrieval outperforms temporal retrieval or no memory
+when controlling for the amount of retrieved information.
+
+2.2. Hypotheses (Pre-registered)
+--------------------------------
+Primary Hypothesis:
+- H₁: attempts_semantic < attempts_temporal < attempts_none
+- H₀: No significant differences between conditions
+
+We will use Bonferroni-corrected α = 0.017 (0.05/3 comparisons)
+
+2.3. Power Analysis
+-------------------
+Based on pilot data expecting effect size d=0.5:
+- Required n = 150 problems per condition for 80% power
+- Total test set: 150 problems
+- Each problem tested with all 3 conditions (within-subjects design)
+
+2.4. Data Generation
+--------------------
+Problem Generation Protocol:
+```
+RANDOM_SEED = 42
+
+Problem Types (equal distribution):
+1. Linear: y = ax + b, where a ∈ [-10, 10], b ∈ [-20, 20]
+2. Quadratic: y = ax² + bx + c, where coefficients ∈ [-5, 5]
+3. Exponential: y = a * b^x, where a ∈ [1, 5], b ∈ [1.1, 3]
+4. Trigonometric: y = a * sin(bx) + c, where a ∈ [1, 10], b ∈ [0.5, 2], c ∈ [-5, 5]
+
+For each problem:
+- Generate 10 (x, y) pairs with x ∈ [-10, 10]
+- Add noise: y_noisy = y + ε, where ε ~ N(0, 0.1)
+- Store: problem_id, equation_type, true_equation, data_points
+
+Memory Set: 1,500 problems (375 of each type)
+Test Set: 150 problems (must be verified non-overlapping)
+Validation: Use hash of equation coefficients to ensure no duplicates
+```
+
+2.5. Memory Database Creation
+-----------------------------
+Initial Setup Phase:
+1. Run baseline agent on Memory Set (1,500 problems)
+2. For each solved problem, store structured memo:
+```json
+{
+  "problem_id": "uuid",
+  "equation_type": "quadratic",
+  "data_summary": "10 points, x∈[-10,10], y∈[-50,100]",
+  "solution": "2*x**2 - 3*x + 5",
+  "attempts": 7,
+  "failed_guesses": ["x**2", "2*x**2", ...],
+  "strategy_used": "noticed quadratic growth pattern"
+}
+```
+
+3. Create embeddings using TWO methods:
+   a. Text embeddings (MiniLM) on concatenated memo fields
+   b. Structured embeddings on numerical features:
+      - [x_range, y_range, y_variance, y_skewness, correlation, autocorrelation]
+
+2.6. Experimental Conditions
+-----------------------------
+All conditions use the same base Phi-3-mini model with:
+- Temperature = 0.3 (for reproducibility)
+- Max attempts = 20 per problem
+- Same prompt template
+
+Condition 1: No Memory (Baseline)
+- No retrieval from database
+- Agent solves using only current problem data
+
+Condition 2: Temporal Retrieval (Control)
+- Retrieves exactly 5 most recent memos from database
+- Fixed retrieval count controls information amount
+
+Condition 3: Semantic Retrieval (Experimental)
+- Embeds current problem data
+- Retrieves exactly 5 most similar memos
+- Uses combined similarity score: 0.7*text_similarity + 0.3*structured_similarity
+
+2.7. Evaluation Protocol
+------------------------
+For each of 150 test problems:
+1. Run each condition 3 times (different random seeds: 100, 200, 300)
+2. Record: attempts_to_solve, final_guess, success (boolean)
+3. Compute median attempts across 3 runs (reduces noise)
+
+Total runs: 150 problems × 3 conditions × 3 seeds = 1,350 evaluations
+
+2.8. Statistical Analysis
+-------------------------
+Primary Metrics:
+- median_attempts per problem per condition
+- success_rate per condition
+- censoring_rate (% hitting 20-attempt limit)
+
+Statistical Tests:
+1. Friedman test for overall differences (non-parametric, handles censored data)
+2. If significant, post-hoc Wilcoxon signed-rank tests with Bonferroni correction
+3. Report effect sizes (Cliff's delta for non-parametric data)
+
+Validation Checks:
+- Test for order effects (randomize condition order per problem)
+- Check embedding quality: Do similar equations cluster? (t-SNE visualization)
+- Report confidence intervals using bootstrap (1000 samples)
+
+================================================================================
+3. EXPERIMENT 2: FINE-TUNING FOR INTUITION
+================================================================================
+
+3.1. Objective
+--------------
+Test whether fine-tuning improves RAG utilization and compare training
+on distilled summaries vs. raw experience logs.
+
+3.2. Pre-specified Success Criteria
+------------------------------------
+We declare success if ONE of these conditions is met:
+
+Efficiency Win:
+- training_time(Summary) < 0.5 × training_time(Raw) AND
+- performance(Summary) ≥ 0.9 × performance(Raw)
+
+Performance Win:
+- performance(Summary) < 0.85 × performance(Raw) AND
+- training_time(Summary) ≤ 2.0 × training_time(Raw)
+
+Where performance = 1 / median_attempts (higher is better)
+
+3.3. Training Data Generation
+-----------------------------
+Using the 1,500 solved problems from E1:
+
+Dataset S (Summaries):
+- Format each solution as instruction-tuning example:
+```
+Instruction: Given data points [(x1,y1), ...], what pattern should I look for?
+Input: [problem data]
+Output: Check for [specific pattern]. Similar to [equation type]. Try [strategy].
+```
+- Total size: ~1,500 examples, ~300KB
+
+Dataset R (Raw Logs):
+- Format complete solution trajectory:
+```
+Instruction: Given data points [(x1,y1), ...], find the equation.
+Input: [problem data]
+Output: [Full transcript including all attempts, retrievals, reasoning]
+```
+- Total size: ~1,500 examples, ~15MB
+
+Dataset structure must be identical except for output content.
+
+3.4. Fine-Tuning Protocol
+-------------------------
+Base Model: Phi-3-mini-4k-instruct
+
+LoRA Configuration (same for all):
+```python
+config = {
+    "r": 8,  # rank
+    "alpha": 16,
+    "dropout": 0.1,
+    "target_modules": ["q_proj", "v_proj"],
+    "learning_rate": 5e-5,
+    "batch_size": 4,
+    "gradient_accumulation_steps": 4,
+    "warmup_ratio": 0.1,
+    "num_epochs": 3,  # will use early stopping
+    "seed": 42
+}
+```
+
+Training Process:
+1. Split each dataset: 80% train, 20% validation
+2. Train with early stopping (patience=3 on validation loss)
+3. Record: total_time, final_validation_loss, training_curves
+4. Save checkpoints every 100 steps
+
+3.5. Evaluation Protocol
+------------------------
+Models to Test:
+- Model-C: Base Phi-3-mini (control)
+- Model-S: Fine-tuned on summaries
+- Model-R: Fine-tuned on raw logs
+
+Test Procedure:
+1. Use same 150-problem test set from E1
+2. All models have access to the same 1,500-memo RAG database
+3. Use "Chain of Thought + Retrieval" prompt:
+```
+Given these data points: [data]
+Step 1: State your initial hypothesis about the pattern
+Step 2: Retrieve similar problems based on your hypothesis
+Step 3: Review retrieved examples
+Step 4: Make your guess
+```
+
+4. Run each model 3 times per problem (seeds: 100, 200, 300)
+5. Record: attempts, retrieval_quality, hypothesis_quality
+
+3.6. Metrics and Analysis
+-------------------------
+Efficiency Metrics:
+- training_wall_time (seconds on M2 Pro)
+- model_size (MB)
+- inference_time per attempt
+
+Performance Metrics:
+- median_attempts_to_solve
+- success_rate
+- retrieval_precision (% relevant memos in top-5)
+
+Statistical Tests:
+1. Kruskal-Wallis test for overall differences
+2. Post-hoc Dunn's test with Bonferroni correction
+3. Cost-efficiency frontier plot
+
+Ablation Studies:
+1. Test without retrieval step (isolates fine-tuning effect)
+2. Test with random retrievals (isolates hypothesis quality)
+3. Measure hypothesis-to-retrieval correlation
+
+================================================================================
+4. REPRODUCIBILITY CHECKLIST
+================================================================================
+
+Code and Data:
+□ All random seeds specified and fixed
+□ Problem generation code deterministic
+□ Train/test split uses consistent hash
+□ Model weights saved and versioned
+□ Exact library versions recorded
+
+Experimental Controls:
+□ Run conditions in randomized order
+□ Use same compute resources throughout
+□ Monitor for data leakage (similarity metrics)
+□ Record all hyperparameters
+□ Save all intermediate results
+
+Reporting:
+□ Pre-register hypotheses before running
+□ Report all metrics (not just significant ones)
+□ Include confidence intervals
+□ Show distribution plots, not just means
+□ Report failure/censoring rates
+□ Include negative results
+
+================================================================================
+5. LIMITATIONS AND ASSUMPTIONS
+================================================================================
+
+Acknowledged Limitations:
+1. Limited to mathematical equation-fitting domain
+2. Uses small model (Phi-3-mini) - results may not generalize to larger models
+3. Fixed retrieval count (5) - optimal count not explored
+4. Single embedding method - could compare multiple
+5. M2 Pro timing may not reflect other hardware
+
+Assumptions to Validate:
+1. Equation-fitting is representative of broader problem-solving
+2. Text embeddings can capture mathematical similarity (needs validation)
+3. 3 runs per problem sufficient to handle LLM stochasticity
+4. LoRA fine-tuning preserves base capabilities
+
+================================================================================
+6. TIMELINE AND MILESTONES
+================================================================================
+
+Week 1: Infrastructure Setup
+- [ ] Implement problem generator with validation
+- [ ] Set up SQLite-vec database
+- [ ] Validate embedding quality for math problems
+- [ ] Create base agent with consistent prompting
+
+Week 2: Experiment 1
+- [ ] Generate memory and test sets
+- [ ] Run baseline agent to populate database
+- [ ] Implement three retrieval conditions
+- [ ] Run evaluation (1,350 runs)
+- [ ] Statistical analysis and validation
+
+Week 3: Experiment 2
+- [ ] Generate training datasets (S and R)
+- [ ] Fine-tune models with monitoring
+- [ ] Run evaluation on all three models
+- [ ] Ablation studies
+- [ ] Final analysis and reporting
+
+Week 4: Analysis and Writing
+- [ ] Compile all results
+- [ ] Create publication-ready figures
+- [ ] Write up methodology and results
+- [ ] Internal review and revision

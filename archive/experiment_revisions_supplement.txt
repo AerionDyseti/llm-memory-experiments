@@ -1,0 +1,268 @@
+EXPERIMENTAL DESIGN - SUPPLEMENTARY REVISIONS
+Date: 2025-11-14
+Based on user feedback
+
+================================================================================
+INTERIM EXPERIMENT 0: RETRIEVAL PARAMETER OPTIMIZATION
+================================================================================
+
+Purpose: Find optimal parameters for semantic retrieval before main experiments
+
+0.1. Parameter Grid Search
+--------------------------
+Parameters to optimize:
+- text_weight vs structured_weight (sum to 1.0)
+- number_of_retrieved_memos (3, 5, 7, 10)
+- embedding_model comparison:
+  * MiniLM (general text)
+  * all-mpnet-base-v2 (better semantic understanding)
+  * Mathematical-specific: AnglE or MathBERT if available
+
+0.2. Optimization Protocol
+--------------------------
+1. Create validation set: 200 problems from Memory Set
+2. For each parameter combination:
+   - Run 50 random problems
+   - Measure: retrieval_relevance_score
+   - Relevance = % of retrieved memos with same equation type
+   - Track: median_attempts, success_rate
+
+3. Grid search:
+```python
+text_weights = [0.0, 0.3, 0.5, 0.7, 1.0]
+n_memos = [3, 5, 7, 10]
+models = ['MiniLM', 'mpnet', 'angle']
+
+# Total: 5 × 4 × 3 = 60 combinations
+# Quick evaluation: 50 problems × 60 = 3,000 runs
+```
+
+4. Select configuration with best performance/efficiency trade-off
+5. Use selected parameters for main experiments
+
+================================================================================
+REVISED SECTION 3.2: REALISTIC SUCCESS CRITERIA
+================================================================================
+
+3.2. Pre-specified Success Criteria (REVISED)
+----------------------------------------------
+We declare success if ONE of these conditions is met:
+
+Efficiency Win (Moderate):
+- training_time(Summary) < 0.65 × training_time(Raw) AND
+- performance(Summary) ≥ 0.95 × performance(Raw)
+- Interpretation: 35% faster training with minimal performance loss
+
+Efficiency Win (Strong):
+- training_time(Summary) < 0.50 × training_time(Raw) AND
+- performance(Summary) ≥ 0.85 × performance(Raw)
+- Interpretation: 50% faster training with acceptable performance loss
+
+Performance Win (Moderate):
+- performance(Summary) < 0.75 × performance(Raw) AND
+- training_time(Summary) ≤ 1.5 × training_time(Raw)
+- Interpretation: 25% better performance with acceptable training cost
+
+Performance Win (Strong):
+- performance(Summary) < 0.50 × performance(Raw) AND
+- training_time(Summary) ≤ 2.0 × training_time(Raw)
+- Interpretation: 50% better performance even with longer training
+
+Token Efficiency Win:
+- total_tokens(Summary) < 0.60 × total_tokens(Raw) AND
+- performance(Summary) ≥ 0.90 × performance(Raw)
+- Interpretation: 40% token savings with good performance
+
+Where performance = 1 / median_attempts (higher is better)
+
+================================================================================
+REVISED SECTION 3.3: TRAINING DATA WITH RAG RETRIEVAL
+================================================================================
+
+3.3. Training Data Generation (REVISED)
+----------------------------------------
+Using the 1,500 solved problems from E1:
+
+Dataset S (Summaries with Retrieval):
+```
+Instruction: Analyze this problem and use memory to find the solution.
+Input: Data points: [(x1,y1), ...]
+
+Step 1 - Initial Analysis: The data shows [pattern description].
+This suggests [equation type].
+
+Step 2 - Memory Query: Searching for problems with [specific features]...
+
+Step 3 - Retrieved Examples:
+1. Similar problem with quadratic growth → solution: x²+2
+2. Problem with same x-range → solution: 2x²-5
+
+Step 4 - Solution Strategy: Based on retrieved examples, focusing on
+[specific approach]. Testing [equation family].
+
+Step 5 - Final Answer: 2*x**2 - 3*x + 5
+```
+
+Dataset R (Raw Logs with Retrieval):
+```
+Instruction: Analyze this problem and use memory to find the solution.
+Input: Data points: [(x1,y1), ...]
+
+[Full transcript including:]
+Attempt 1: Let me analyze the data... checking linear patterns...
+RAG Query: "linear growth constant slope"
+Retrieved: [5 memos with linear equations]
+Guess: 3*x + 2
+Result: Loss = 45.2, too high
+
+Attempt 2: The loss suggests non-linear...
+RAG Query: "quadratic polynomial growth"
+Retrieved: [5 memos with quadratic equations]
+Studying retrieval #3: y = x² + 3x worked for similar range...
+Guess: x**2 + 3*x
+Result: Loss = 12.1, getting closer
+
+[... continue through all attempts ...]
+
+Final Answer: 2*x**2 - 3*x + 5
+```
+
+Key Difference: Both datasets now explicitly include the RAG retrieval process,
+but Dataset S distills the learning while Dataset R preserves the full journey.
+
+================================================================================
+REVISED SECTION 3.6: COMPREHENSIVE METRICS
+================================================================================
+
+3.6. Metrics and Analysis (REVISED)
+------------------------------------
+
+Efficiency Metrics:
+- training_wall_time (seconds on M2 Pro)
+- training_tokens_total (input + output during training)
+- model_size_delta (LoRA adapter size in MB)
+- training_cost_estimate = (input_tokens × $0.003 + output_tokens × $0.015) / 1M
+
+Performance Metrics:
+- median_attempts_to_solve
+- success_rate
+- retrieval_precision (% relevant memos in top-5)
+
+Token Usage Metrics (Critical for deployment):
+- tokens_per_attempt_median (input + output)
+- total_tokens_to_solution = Σ(tokens_per_attempt)
+- inference_cost_estimate = (total_tokens × $0.003) / 1M
+- token_efficiency = 1 / (median_attempts × tokens_per_attempt)
+
+RAG Quality Metrics:
+- retrieval_query_quality (embedding similarity to optimal query)
+- retrieval_diversity (unique equation types in top-5)
+- retrieval_utilization (% of retrieved memos referenced in reasoning)
+
+Statistical Tests:
+1. Kruskal-Wallis test for overall differences
+2. Post-hoc Dunn's test with Bonferroni correction
+3. Cost-efficiency Pareto frontier (attempts vs tokens vs time)
+4. Bootstrap confidence intervals for all metrics
+
+Reporting Requirements:
+- Box plots for all distributions (not just means)
+- Correlation matrix between metrics
+- Pareto frontier visualization
+- Token usage breakdown (retrieval vs reasoning vs output)
+
+================================================================================
+FUTURE EXPERIMENTS ROADMAP
+================================================================================
+
+Based on "Assumptions to Validate", prioritized by feasibility and impact:
+
+Experiment A: Embedding Model Comparison for Mathematical Problems
+------------------------------------------------------------------
+- Question: Do math-specific embeddings outperform general text embeddings?
+- Design: Compare MiniLM vs MathBERT vs symbolic representations
+- Timeline: 1 week
+- Priority: HIGH (directly affects E1 validity)
+
+Experiment B: Optimal Retrieval Count Investigation
+---------------------------------------------------
+- Question: Is there an optimal number of examples to retrieve?
+- Design: Vary k from 1 to 20, measure performance vs efficiency curve
+- Timeline: 3 days
+- Priority: MEDIUM (could improve both experiments)
+
+Experiment C: Domain Transfer Study
+------------------------------------
+- Question: Do results generalize beyond equation-fitting?
+- Domains to test:
+  * Logic puzzles
+  * Code debugging
+  * Natural language reasoning
+- Timeline: 2-3 weeks per domain
+- Priority: HIGH (critical for generalization claims)
+
+Experiment D: Model Size Scaling
+---------------------------------
+- Question: Do results hold for larger models?
+- Models: Phi-3-mini → Llama-3-8B → Mixtral-8x7B
+- Timeline: 1 week (requires GPU access)
+- Priority: MEDIUM (important for practical applications)
+
+Experiment E: Hybrid Retrieval Strategies
+------------------------------------------
+- Question: Can we combine semantic + temporal + diversity?
+- Design: Multi-objective retrieval optimization
+- Timeline: 1 week
+- Priority: LOW (optimization, not core research)
+
+Experiment F: Active Learning for Memory Curation
+--------------------------------------------------
+- Question: Can the agent learn which memories to keep/forget?
+- Design: Reinforcement learning on memory management
+- Timeline: 3-4 weeks
+- Priority: LOW (advanced extension)
+
+Experiment G: Prompt Engineering Impact
+----------------------------------------
+- Question: How sensitive are results to prompt format?
+- Design: Test 10 different prompt templates
+- Timeline: 3 days
+- Priority: HIGH (affects reproducibility)
+
+Experiment H: Stochasticity Analysis
+-------------------------------------
+- Question: How many runs needed for stable results?
+- Design: Vary runs from 1 to 10, measure convergence
+- Timeline: 2 days
+- Priority: MEDIUM (affects experimental cost)
+
+================================================================================
+PRACTICAL DEPLOYMENT CONSIDERATIONS
+================================================================================
+
+Cost Analysis Framework:
+------------------------
+For each configuration, report:
+1. Training cost (time + tokens)
+2. Inference cost per problem (tokens)
+3. Success rate
+4. Projected cost for 10,000 problems
+5. Break-even point vs baseline
+
+This allows practitioners to choose based on their constraints:
+- Budget-constrained: Optimize tokens/dollar
+- Latency-constrained: Optimize time/solution
+- Quality-constrained: Optimize success rate
+
+Example Decision Matrix:
+```
+              | Training | $/1K problems | Success | Latency |
+--------------|----------|---------------|---------|---------|
+No Memory     | 0        | $0.50         | 65%     | 8s      |
+Temporal RAG  | 0        | $1.20         | 75%     | 12s     |
+Semantic RAG  | 0        | $1.20         | 85%     | 11s     |
+Fine-tuned S  | $5       | $0.80         | 88%     | 9s      |
+Fine-tuned R  | $15      | $0.85         | 90%     | 10s     |
+```
+
+Practitioners can then choose based on their volume and requirements.
