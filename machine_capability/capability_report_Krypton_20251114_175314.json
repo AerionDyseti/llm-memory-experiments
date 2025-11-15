@@ -1,0 +1,228 @@
+{
+  "metadata": {
+    "timestamp": "2025-11-14T17:52:16.385569",
+    "duration_seconds": 57.85,
+    "hostname": "Krypton",
+    "report_version": "2.0"
+  },
+  "results": {
+    "system": {
+      "hostname": "Krypton",
+      "platform": "Linux",
+      "platform_release": "6.6.87.2-microsoft-standard-WSL2",
+      "platform_version": "#1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025",
+      "architecture": "x86_64",
+      "processor": "x86_64",
+      "python_version": "3.12.3 (main, Aug 14 2025, 17:47:21) [GCC 13.3.0]",
+      "python_implementation": "CPython",
+      "cpu": {
+        "physical_cores": 12,
+        "logical_cores": 24,
+        "current_freq_mhz": 4691.076,
+        "min_freq_mhz": 0.0,
+        "max_freq_mhz": 0.0
+      },
+      "memory": {
+        "total_gb": 46.62,
+        "available_gb": 45.27,
+        "used_gb": 1.35,
+        "percent_used": 2.9,
+        "swap_total_gb": 12.0,
+        "swap_used_gb": 0.0
+      },
+      "storage": {
+        "total_gb": 1006.85,
+        "used_gb": 32.58,
+        "free_gb": 923.06,
+        "percent_used": 3.4
+      },
+      "gpu": {
+        "type": "nvidia",
+        "name": "NVIDIA GeForce RTX 4060 Ti",
+        "memory": "8188 MiB",
+        "driver": "581.15"
+      }
+    },
+    "cpu": {
+      "matrix_mult": {
+        "time_seconds": 1.044,
+        "gflops": 95.75
+      },
+      "fft": {
+        "time_seconds": 3.964,
+        "throughput_msamples_sec": 26.46
+      },
+      "integer_ops": {
+        "time_seconds": 3.267,
+        "ops_per_second": 30611543.0
+      },
+      "threading": {
+        "single_thread_time": 0.437,
+        "multi_thread_time": 0.456,
+        "threads_used": 12,
+        "speedup": 0.96
+      },
+      "rating": "Excellent"
+    },
+    "memory": {
+      "max_allocation_gb": 32,
+      "bandwidth_gb_s": {
+        "read": 37.71,
+        "write": 17.22
+      },
+      "pressure_test": {
+        "status": "stable",
+        "message": "System handles memory pressure well"
+      }
+    },
+    "storage": {
+      "4KB": {
+        "read_mb_s": 2197.16,
+        "write_mb_s": 1.4,
+        "iterations": 100
+      },
+      "1MB": {
+        "read_mb_s": 15863.78,
+        "write_mb_s": 88.37,
+        "iterations": 100
+      },
+      "10MB": {
+        "read_mb_s": 13116.53,
+        "write_mb_s": 81.09,
+        "iterations": 10
+      },
+      "random_access": {
+        "iops": 427350.0,
+        "latency_ms": 0.0
+      },
+      "rating": "SSD (Good)"
+    },
+    "software": {
+      "numpy": {
+        "installed": true,
+        "required": true
+      },
+      "scipy": {
+        "installed": false,
+        "required": true
+      },
+      "pandas": {
+        "installed": false,
+        "required": false
+      },
+      "sentence_transformers": {
+        "installed": false,
+        "required": true
+      },
+      "transformers": {
+        "installed": false,
+        "required": true
+      },
+      "torch": {
+        "installed": false,
+        "required": false
+      },
+      "tensorflow": {
+        "installed": false,
+        "required": false
+      },
+      "ollama": {
+        "installed": false
+      },
+      "sqlite_vec": {
+        "installed": false,
+        "required": false
+      },
+      "git": {
+        "installed": true,
+        "version": "git version 2.43.0"
+      },
+      "docker": {
+        "installed": false
+      },
+      "python3": {
+        "installed": true,
+        "version": "Python 3.12.3"
+      },
+      "pip": {
+        "installed": false
+      },
+      "curl": {
+        "installed": true,
+        "version": "curl 8.5.0 (x86_64-pc-linux-gnu) libcurl/8.5.0 OpenSSL/3.0.13 zlib/1.3 brotli/1.1.0 zstd/1.5.5 libidn2/2.3.7 libpsl/0.21.2 (+libidn2/2.3.7) libssh/0.10.6/openssl/zlib nghttp2/1.59.0 librtmp/2.3 OpenLDAP/2.6.7"
+      },
+      "wget": {
+        "installed": true,
+        "version": "GNU Wget 1.21.4 built on linux-gnu."
+      }
+    },
+    "llm": {
+      "ollama": {
+        "available": false,
+        "error": "Ollama not installed"
+      },
+      "embeddings": {
+        "status": "not_installed",
+        "error": "sentence-transformers not installed"
+      },
+      "inference": {
+        "status": "skipped",
+        "reason": "Ollama not available"
+      },
+      "finetuning": {
+        "lora_rank_8": true,
+        "lora_rank_16": true,
+        "lora_rank_32": true,
+        "full_finetuning_3b": true,
+        "quantized_finetuning": true,
+        "cuda_available": true,
+        "recommended_framework": "transformers+peft",
+        "estimated_speed": "fast"
+      }
+    },
+    "network": {
+      "internet": true,
+      "github": true,
+      "bandwidth": "Not tested"
+    },
+    "eligibility": {
+      "prerequisites": {
+        "eligible": true,
+        "reasons": [
+          "Sufficient memory and disk"
+        ]
+      },
+      "e0_parameter_optimization": {
+        "eligible": true,
+        "reasons": [
+          "Can run parameter search"
+        ]
+      },
+      "e1_memory_retrieval": {
+        "eligible": true,
+        "reasons": [
+          "Can run retrieval experiments"
+        ]
+      },
+      "e2_finetuning_full": {
+        "eligible": true,
+        "reasons": [
+          "Can run full precision fine-tuning"
+        ]
+      },
+      "e2_finetuning_quantized": {
+        "eligible": false,
+        "reasons": []
+      },
+      "machine_tier": 3,
+      "recommended_role": "Full experiment runner (all phases)"
+    }
+  },
+  "recommendations": [],
+  "warnings": [
+    "Required package 'scipy' not installed",
+    "Required package 'sentence_transformers' not installed",
+    "Required package 'transformers' not installed",
+    "Required package 'ollama' not installed"
+  ]
+}

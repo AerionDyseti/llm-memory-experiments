@@ -1,0 +1,12 @@
+Machine Capability Summary - Krypton
+Generated: 2025-11-14 17:53:14
+============================================================
+
+Machine Tier: 3
+Role: Full experiment runner (all phases)
+
+Eligible Experiments:
+  ✓ Prerequisites
+  ✓ E0 Parameter Optimization
+  ✓ E1 Memory Retrieval
+  ✓ E2 Finetuning Full
