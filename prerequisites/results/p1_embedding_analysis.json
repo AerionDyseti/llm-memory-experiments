@@ -1,0 +1,46 @@
+{
+    "text": {
+        "clustering_analysis": {
+            "intra_mean": 0.9937742352485657,
+            "intra_std": 0.002733988454565406,
+            "inter_mean": 0.9926761984825134,
+            "inter_std": 0.0025722822174429893,
+            "separation": 0.001098036766052246,
+            "similarity_ratio": 1.0011061429977417
+        },
+        "knn_accuracy": 0.4666666666666667
+    },
+    "semantic": {
+        "clustering_analysis": {
+            "intra_mean": 0.9452524781227112,
+            "intra_std": 0.036804817616939545,
+            "inter_mean": 0.7905136346817017,
+            "inter_std": 0.07267788797616959,
+            "separation": 0.15473884344100952,
+            "similarity_ratio": 1.1957446336746216
+        },
+        "knn_accuracy": 1.0
+    },
+    "mathbert": {
+        "clustering_analysis": {
+            "intra_mean": 0.9754834175109863,
+            "intra_std": 0.012130986899137497,
+            "inter_mean": 0.9531837105751038,
+            "inter_std": 0.02119961380958557,
+            "separation": 0.02229970693588257,
+            "similarity_ratio": 1.0233949422836304
+        },
+        "knn_accuracy": 0.9333333333333333
+    },
+    "hybrid": {
+        "clustering_analysis": {
+            "intra_mean": 0.8116909796211358,
+            "intra_std": 0.32997623204161414,
+            "inter_mean": 0.7791365416477323,
+            "inter_std": 0.2698225870524096,
+            "separation": 0.032554437973403516,
+            "similarity_ratio": 1.041782712314528
+        },
+        "knn_accuracy": 0.8333333333333334
+    }
+}

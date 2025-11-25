@@ -1,0 +1,35 @@
+{
+    "text": {
+        "clustering_analysis": {
+            "intra_mean": 0.7964082956314087,
+            "intra_std": 0.18658293783664703,
+            "inter_mean": 0.5018027424812317,
+            "inter_std": 0.07627303153276443,
+            "separation": 0.294605553150177,
+            "similarity_ratio": 1.5870943069458008
+        },
+        "knn_accuracy": 1.0
+    },
+    "semantic": {
+        "clustering_analysis": {
+            "intra_mean": 0.7695688605308533,
+            "intra_std": 0.2193586379289627,
+            "inter_mean": 0.4497799873352051,
+            "inter_std": 0.09117225557565689,
+            "separation": 0.3197888731956482,
+            "similarity_ratio": 1.7109895944595337
+        },
+        "knn_accuracy": 1.0
+    },
+    "mathbert": {
+        "clustering_analysis": {
+            "intra_mean": 0.9338696002960205,
+            "intra_std": 0.06577969342470169,
+            "inter_mean": 0.8588317632675171,
+            "inter_std": 0.08625297248363495,
+            "separation": 0.07503783702850342,
+            "similarity_ratio": 1.0873719453811646
+        },
+        "knn_accuracy": 1.0
+    }
+}

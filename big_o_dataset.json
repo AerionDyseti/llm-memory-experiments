@@ -1,0 +1,1802 @@
+[
+  {
+    "id": "O(1)_template2_22_d283",
+    "complexity_class": "O(1)",
+    "code": "# A simple implementation\n\ndef perform_simple_calculation(a, b):\n    # Basic arithmetic operations are constant time\n    x = a * 2\n    y = b + 10\n    result = x - y\n    return result\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(2^n)_template1_4_6421",
+    "complexity_class": "O(2^n)",
+    "code": "# A simple implementation\n\ndef recursive_fibonacci(n):\n    # Each call branches into two more calls\n    if n <= 1:\n        return n\n    else:\n        return recursive_fibonacci(n - 1) + recursive_fibonacci(n - 2)\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(1)_template1_23_27d9",
+    "complexity_class": "O(1)",
+    "code": "\ndef get_first_element(input_list):\n    # Accessing by index is a constant time operation\n    if input_list:\n        return input_list[0]\n    return None\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(n^2)_template1_11_fc0c",
+    "complexity_class": "O(n^2)",
+    "code": "\ndef find_all_pairs(input_list):\n    # A nested loop where both loops depend on the size of the input\n    pairs = []\n    for i in range(len(input_list)):\n        for j in range(len(input_list)):\n            if i != j:\n                pairs.append((input_list[i], input_list[j]))\n    return pairs\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(n^2)_template2_1_8df6",
+    "complexity_class": "O(n^2)",
+    "code": "# A simple implementation\n\ndef bubble_sort(data):\n    # The outer loop runs n times, and the inner loop runs up to n times\n    n = len(data)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if data[j] > data[j + 1]:\n                data[j], data[j + 1] = data[j + 1], data[j]\n    return data\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(n)_template1_12_7e27",
+    "complexity_class": "O(n)",
+    "code": "\ndef sum_list_elements(data):\n    # The loop runs once for each element in the list\n    total = 0\n    for item in data:\n        total += item\n    return total\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(1)_template2_24_89d6",
+    "complexity_class": "O(1)",
+    "code": "\ndef perform_simple_calculation(a, b):\n    # Basic arithmetic operations are constant time\n    x = a * 2\n    y = b + 10\n    result = x - y\n    return result\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(n^2)_template1_20_e0a7",
+    "complexity_class": "O(n^2)",
+    "code": "\ndef find_all_pairs(input_list):\n    # A nested loop where both loops depend on the size of the input\n    pairs = []\n    for i in range(len(input_list)):\n        for j in range(len(input_list)):\n            if i != j:\n                pairs.append((input_list[i], input_list[j]))\n    return pairs\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(n)_template2_7_6f50",
+    "complexity_class": "O(n)",
+    "code": "# A simple implementation\n\ndef find_element_in_list(data, target):\n    # In the worst case, we have to check every element\n    index = 0\n    while index < len(data):\n        if data[index] == target:\n            return index\n        index += 1\n    return -1\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(1)_template2_20_1a60",
+    "complexity_class": "O(1)",
+    "code": "\ndef perform_simple_calculation(a, b):\n    # Basic arithmetic operations are constant time\n    x = a * 2\n    y = b + 10\n    result = x - y\n    return result\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(n)_template1_9_42d5",
+    "complexity_class": "O(n)",
+    "code": "\ndef sum_list_elements(data):\n    # The loop runs once for each element in the list\n    total = 0\n    for item in data:\n        total += item\n    return total\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(n)_template2_21_533d",
+    "complexity_class": "O(n)",
+    "code": "\ndef find_element_in_list(data, target):\n    # In the worst case, we have to check every element\n    index = 0\n    while index < len(data):\n        if data[index] == target:\n            return index\n        index += 1\n    return -1\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(n^2)_template1_3_54f9",
+    "complexity_class": "O(n^2)",
+    "code": "\ndef find_all_pairs(data):\n    # A nested loop where both loops depend on the size of the input\n    pairs = []\n    for i in range(len(data)):\n        for j in range(len(data)):\n            if i != j:\n                pairs.append((data[i], data[j]))\n    return pairs\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template2_24_f2f8",
+    "complexity_class": "O(n log n)",
+    "code": "\nimport heapq\n\ndef heap_sort(data):\n    # Building a heap is O(n)\n    # Repeatedly extracting the min element is O(log n), done n times\n    heapq.heapify(data)\n    sorted_data = []\n    while data:\n        sorted_data.append(heapq.heappop(data))\n    return sorted_data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(1)_template1_3_4626",
+    "complexity_class": "O(1)",
+    "code": "\ndef get_first_element(data):\n    # Accessing by index is a constant time operation\n    if data:\n        return data[0]\n    return None\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(logn)_template2_12_adbb",
+    "complexity_class": "O(log n)",
+    "code": "\ndef find_power_of_two(n):\n    # This loop divides n by 2 in each iteration\n    i = 1\n    while i < n:\n        i *= 2\n    return i\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(2^n)_template2_16_066e",
+    "complexity_class": "O(2^n)",
+    "code": "# A simple implementation\n\ndef generate_all_subsets(data):\n    if not data:\n        return [[]]\n\n    first = data[0]\n    rest = data[1:]\n\n    subsets_without_first = generate_all_subsets(rest)\n    subsets_with_first = []\n\n    for subset in subsets_without_first:\n        subsets_with_first.append(subset + [first])\n\n    return subsets_without_first + subsets_with_first\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(1)_template2_11_7878",
+    "complexity_class": "O(1)",
+    "code": "\ndef perform_simple_calculation(a, b):\n    # Basic arithmetic operations are constant time\n    x = a * 2\n    y = b + 10\n    result = x - y\n    return result\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(n)_template1_7_65e6",
+    "complexity_class": "O(n)",
+    "code": "# A simple implementation\n\ndef sum_list_elements(data):\n    # The loop runs once for each element in the list\n    total = 0\n    for item in data:\n        total += item\n    return total\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template2_13_bafd",
+    "complexity_class": "O(n log n)",
+    "code": "# A simple implementation\n\nimport heapq\n\ndef heap_sort(data):\n    # Building a heap is O(n)\n    # Repeatedly extracting the min element is O(log n), done n times\n    heapq.heapify(data)\n    sorted_data = []\n    while data:\n        sorted_data.append(heapq.heappop(data))\n    return sorted_data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(1)_template2_5_cb58",
+    "complexity_class": "O(1)",
+    "code": "\ndef perform_simple_calculation(a, b):\n    # Basic arithmetic operations are constant time\n    x = a * 2\n    y = b + 10\n    result = x - y\n    return result\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(logn)_template2_1_3183",
+    "complexity_class": "O(log n)",
+    "code": "# A simple implementation\n\ndef find_power_of_two(n):\n    # This loop divides n by 2 in each iteration\n    i = 1\n    while i < n:\n        i *= 2\n    return i\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template1_8_bd30",
+    "complexity_class": "O(n log n)",
+    "code": "\ndef merge_sort(input_list):\n    # Recursively dividing the list is O(log n)\n    # Merging the lists is O(n)\n    if len(input_list) > 1:\n        mid = len(input_list) // 2\n        left_half = input_list[:mid]\n        right_half = input_list[mid:]\n\n        merge_sort(left_half)\n        merge_sort(right_half)\n\n        i = j = k = 0\n        while i < len(left_half) and j < len(right_half):\n            if left_half[i] < right_half[j]:\n                input_list[k] = left_half[i]\n                i += 1\n            else:\n                input_list[k] = right_half[j]\n                j += 1\n            k += 1\n\n        while i < len(left_half):\n            input_list[k] = left_half[i]\n            i += 1\n            k += 1\n\n        while j < len(right_half):\n            input_list[k] = right_half[j]\n            j += 1\n            k += 1\n    return input_list\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template1_25_b441",
+    "complexity_class": "O(n log n)",
+    "code": "# A simple implementation\n\ndef merge_sort(data):\n    # Recursively dividing the list is O(log n)\n    # Merging the lists is O(n)\n    if len(data) > 1:\n        mid = len(data) // 2\n        left_half = data[:mid]\n        right_half = data[mid:]\n\n        merge_sort(left_half)\n        merge_sort(right_half)\n\n        i = j = k = 0\n        while i < len(left_half) and j < len(right_half):\n            if left_half[i] < right_half[j]:\n                data[k] = left_half[i]\n                i += 1\n            else:\n                data[k] = right_half[j]\n                j += 1\n            k += 1\n\n        while i < len(left_half):\n            data[k] = left_half[i]\n            i += 1\n            k += 1\n\n        while j < len(right_half):\n            data[k] = right_half[j]\n            j += 1\n            k += 1\n    return data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(n^2)_template2_18_6d86",
+    "complexity_class": "O(n^2)",
+    "code": "\ndef bubble_sort(data):\n    # The outer loop runs n times, and the inner loop runs up to n times\n    n = len(data)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if data[j] > data[j + 1]:\n                data[j], data[j + 1] = data[j + 1], data[j]\n    return data\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(2^n)_template1_19_a455",
+    "complexity_class": "O(2^n)",
+    "code": "# A simple implementation\n\ndef recursive_fibonacci(n):\n    # Each call branches into two more calls\n    if n <= 1:\n        return n\n    else:\n        return recursive_fibonacci(n - 1) + recursive_fibonacci(n - 2)\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(1)_template2_18_4fb5",
+    "complexity_class": "O(1)",
+    "code": "\ndef perform_simple_calculation(a, b):\n    # Basic arithmetic operations are constant time\n    x = a * 2\n    y = b + 10\n    result = x - y\n    return result\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(logn)_template1_9_ba87",
+    "complexity_class": "O(log n)",
+    "code": "\ndef binary_search(sorted_list, target):\n    # Each step halves the search space\n    low = 0\n    high = len(sorted_list) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if sorted_list[mid] == target:\n            return mid\n        elif sorted_list[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(2^n)_template2_5_b42e",
+    "complexity_class": "O(2^n)",
+    "code": "\ndef generate_all_subsets(input_list):\n    if not input_list:\n        return [[]]\n\n    first = input_list[0]\n    rest = input_list[1:]\n\n    subsets_without_first = generate_all_subsets(rest)\n    subsets_with_first = []\n\n    for subset in subsets_without_first:\n        subsets_with_first.append(subset + [first])\n\n    return subsets_without_first + subsets_with_first\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(n^2)_template1_23_8a69",
+    "complexity_class": "O(n^2)",
+    "code": "\ndef find_all_pairs(input_list):\n    # A nested loop where both loops depend on the size of the input\n    pairs = []\n    for i in range(len(input_list)):\n        for j in range(len(input_list)):\n            if i != j:\n                pairs.append((input_list[i], input_list[j]))\n    return pairs\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(n)_template1_4_d683",
+    "complexity_class": "O(n)",
+    "code": "# A simple implementation\n\ndef sum_list_elements(data):\n    # The loop runs once for each element in the list\n    total = 0\n    for item in data:\n        total += item\n    return total\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(1)_template1_10_11cf",
+    "complexity_class": "O(1)",
+    "code": "# A simple implementation\n\ndef get_first_element(data):\n    # Accessing by index is a constant time operation\n    if data:\n        return data[0]\n    return None\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(n)_template2_2_3cef",
+    "complexity_class": "O(n)",
+    "code": "\ndef find_element_in_list(input_list, value):\n    # In the worst case, we have to check every element\n    index = 0\n    while index < len(input_list):\n        if input_list[index] == value:\n            return index\n        index += 1\n    return -1\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template1_2_a32c",
+    "complexity_class": "O(n log n)",
+    "code": "\ndef merge_sort(input_list):\n    # Recursively dividing the list is O(log n)\n    # Merging the lists is O(n)\n    if len(input_list) > 1:\n        mid = len(input_list) // 2\n        left_half = input_list[:mid]\n        right_half = input_list[mid:]\n\n        merge_sort(left_half)\n        merge_sort(right_half)\n\n        i = j = k = 0\n        while i < len(left_half) and j < len(right_half):\n            if left_half[i] < right_half[j]:\n                input_list[k] = left_half[i]\n                i += 1\n            else:\n                input_list[k] = right_half[j]\n                j += 1\n            k += 1\n\n        while i < len(left_half):\n            input_list[k] = left_half[i]\n            i += 1\n            k += 1\n\n        while j < len(right_half):\n            input_list[k] = right_half[j]\n            j += 1\n            k += 1\n    return input_list\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(2^n)_template2_22_5762",
+    "complexity_class": "O(2^n)",
+    "code": "# A simple implementation\n\ndef generate_all_subsets(data):\n    if not data:\n        return [[]]\n\n    first = data[0]\n    rest = data[1:]\n\n    subsets_without_first = generate_all_subsets(rest)\n    subsets_with_first = []\n\n    for subset in subsets_without_first:\n        subsets_with_first.append(subset + [first])\n\n    return subsets_without_first + subsets_with_first\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template1_13_787c",
+    "complexity_class": "O(n log n)",
+    "code": "# A simple implementation\n\ndef merge_sort(data):\n    # Recursively dividing the list is O(log n)\n    # Merging the lists is O(n)\n    if len(data) > 1:\n        mid = len(data) // 2\n        left_half = data[:mid]\n        right_half = data[mid:]\n\n        merge_sort(left_half)\n        merge_sort(right_half)\n\n        i = j = k = 0\n        while i < len(left_half) and j < len(right_half):\n            if left_half[i] < right_half[j]:\n                data[k] = left_half[i]\n                i += 1\n            else:\n                data[k] = right_half[j]\n                j += 1\n            k += 1\n\n        while i < len(left_half):\n            data[k] = left_half[i]\n            i += 1\n            k += 1\n\n        while j < len(right_half):\n            data[k] = right_half[j]\n            j += 1\n            k += 1\n    return data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template1_24_2a3a",
+    "complexity_class": "O(n log n)",
+    "code": "\ndef merge_sort(data):\n    # Recursively dividing the list is O(log n)\n    # Merging the lists is O(n)\n    if len(data) > 1:\n        mid = len(data) // 2\n        left_half = data[:mid]\n        right_half = data[mid:]\n\n        merge_sort(left_half)\n        merge_sort(right_half)\n\n        i = j = k = 0\n        while i < len(left_half) and j < len(right_half):\n            if left_half[i] < right_half[j]:\n                data[k] = left_half[i]\n                i += 1\n            else:\n                data[k] = right_half[j]\n                j += 1\n            k += 1\n\n        while i < len(left_half):\n            data[k] = left_half[i]\n            i += 1\n            k += 1\n\n        while j < len(right_half):\n            data[k] = right_half[j]\n            j += 1\n            k += 1\n    return data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(n^2)_template1_18_e532",
+    "complexity_class": "O(n^2)",
+    "code": "\ndef find_all_pairs(data):\n    # A nested loop where both loops depend on the size of the input\n    pairs = []\n    for i in range(len(data)):\n        for j in range(len(data)):\n            if i != j:\n                pairs.append((data[i], data[j]))\n    return pairs\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(2^n)_template2_10_30dd",
+    "complexity_class": "O(2^n)",
+    "code": "# A simple implementation\n\ndef generate_all_subsets(data):\n    if not data:\n        return [[]]\n\n    first = data[0]\n    rest = data[1:]\n\n    subsets_without_first = generate_all_subsets(rest)\n    subsets_with_first = []\n\n    for subset in subsets_without_first:\n        subsets_with_first.append(subset + [first])\n\n    return subsets_without_first + subsets_with_first\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template2_15_eadb",
+    "complexity_class": "O(n log n)",
+    "code": "\nimport heapq\n\ndef heap_sort(data):\n    # Building a heap is O(n)\n    # Repeatedly extracting the min element is O(log n), done n times\n    heapq.heapify(data)\n    sorted_data = []\n    while data:\n        sorted_data.append(heapq.heappop(data))\n    return sorted_data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template2_16_fb45",
+    "complexity_class": "O(n log n)",
+    "code": "# A simple implementation\n\nimport heapq\n\ndef heap_sort(data):\n    # Building a heap is O(n)\n    # Repeatedly extracting the min element is O(log n), done n times\n    heapq.heapify(data)\n    sorted_data = []\n    while data:\n        sorted_data.append(heapq.heappop(data))\n    return sorted_data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(n)_template1_20_b50f",
+    "complexity_class": "O(n)",
+    "code": "\ndef sum_list_elements(input_list):\n    # The loop runs once for each element in the list\n    total = 0\n    for item in input_list:\n        total += item\n    return total\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(n)_template2_9_6ffa",
+    "complexity_class": "O(n)",
+    "code": "\ndef find_element_in_list(data, target):\n    # In the worst case, we have to check every element\n    index = 0\n    while index < len(data):\n        if data[index] == target:\n            return index\n        index += 1\n    return -1\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(2^n)_template1_17_d473",
+    "complexity_class": "O(2^n)",
+    "code": "\ndef recursive_fibonacci(n):\n    # Each call branches into two more calls\n    if n <= 1:\n        return n\n    else:\n        return recursive_fibonacci(n - 1) + recursive_fibonacci(n - 2)\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template2_18_a7c7",
+    "complexity_class": "O(n log n)",
+    "code": "\nimport heapq\n\ndef heap_sort(data):\n    # Building a heap is O(n)\n    # Repeatedly extracting the min element is O(log n), done n times\n    heapq.heapify(data)\n    sorted_data = []\n    while data:\n        sorted_data.append(heapq.heappop(data))\n    return sorted_data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(logn)_template1_20_4a40",
+    "complexity_class": "O(log n)",
+    "code": "\ndef binary_search(sorted_list, value):\n    # Each step halves the search space\n    low = 0\n    high = len(sorted_list) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if sorted_list[mid] == value:\n            return mid\n        elif sorted_list[mid] < value:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(n^2)_template2_9_8c0c",
+    "complexity_class": "O(n^2)",
+    "code": "\ndef bubble_sort(data):\n    # The outer loop runs n times, and the inner loop runs up to n times\n    n = len(data)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if data[j] > data[j + 1]:\n                data[j], data[j + 1] = data[j + 1], data[j]\n    return data\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(n)_template1_1_7fdc",
+    "complexity_class": "O(n)",
+    "code": "# A simple implementation\n\ndef sum_list_elements(data):\n    # The loop runs once for each element in the list\n    total = 0\n    for item in data:\n        total += item\n    return total\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template1_10_def1",
+    "complexity_class": "O(n log n)",
+    "code": "# A simple implementation\n\ndef merge_sort(data):\n    # Recursively dividing the list is O(log n)\n    # Merging the lists is O(n)\n    if len(data) > 1:\n        mid = len(data) // 2\n        left_half = data[:mid]\n        right_half = data[mid:]\n\n        merge_sort(left_half)\n        merge_sort(right_half)\n\n        i = j = k = 0\n        while i < len(left_half) and j < len(right_half):\n            if left_half[i] < right_half[j]:\n                data[k] = left_half[i]\n                i += 1\n            else:\n                data[k] = right_half[j]\n                j += 1\n            k += 1\n\n        while i < len(left_half):\n            data[k] = left_half[i]\n            i += 1\n            k += 1\n\n        while j < len(right_half):\n            data[k] = right_half[j]\n            j += 1\n            k += 1\n    return data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template1_11_be3b",
+    "complexity_class": "O(n log n)",
+    "code": "\ndef merge_sort(input_list):\n    # Recursively dividing the list is O(log n)\n    # Merging the lists is O(n)\n    if len(input_list) > 1:\n        mid = len(input_list) // 2\n        left_half = input_list[:mid]\n        right_half = input_list[mid:]\n\n        merge_sort(left_half)\n        merge_sort(right_half)\n\n        i = j = k = 0\n        while i < len(left_half) and j < len(right_half):\n            if left_half[i] < right_half[j]:\n                input_list[k] = left_half[i]\n                i += 1\n            else:\n                input_list[k] = right_half[j]\n                j += 1\n            k += 1\n\n        while i < len(left_half):\n            input_list[k] = left_half[i]\n            i += 1\n            k += 1\n\n        while j < len(right_half):\n            input_list[k] = right_half[j]\n            j += 1\n            k += 1\n    return input_list\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(logn)_template2_23_1a28",
+    "complexity_class": "O(log n)",
+    "code": "\ndef find_power_of_two(n):\n    # This loop divides n by 2 in each iteration\n    i = 1\n    while i < n:\n        i *= 2\n    return i\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(2^n)_template1_11_f032",
+    "complexity_class": "O(2^n)",
+    "code": "\ndef recursive_fibonacci(n):\n    # Each call branches into two more calls\n    if n <= 1:\n        return n\n    else:\n        return recursive_fibonacci(n - 1) + recursive_fibonacci(n - 2)\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template2_20_05cd",
+    "complexity_class": "O(n log n)",
+    "code": "\nimport heapq\n\ndef heap_sort(input_list):\n    # Building a heap is O(n)\n    # Repeatedly extracting the min element is O(log n), done n times\n    heapq.heapify(input_list)\n    sorted_input_list = []\n    while input_list:\n        sorted_input_list.append(heapq.heappop(input_list))\n    return sorted_input_list\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(n)_template2_4_8ee5",
+    "complexity_class": "O(n)",
+    "code": "# A simple implementation\n\ndef find_element_in_list(data, target):\n    # In the worst case, we have to check every element\n    index = 0\n    while index < len(data):\n        if data[index] == target:\n            return index\n        index += 1\n    return -1\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(2^n)_template1_18_9a35",
+    "complexity_class": "O(2^n)",
+    "code": "\ndef recursive_fibonacci(n):\n    # Each call branches into two more calls\n    if n <= 1:\n        return n\n    else:\n        return recursive_fibonacci(n - 1) + recursive_fibonacci(n - 2)\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(n^2)_template1_1_1f73",
+    "complexity_class": "O(n^2)",
+    "code": "# A simple implementation\n\ndef find_all_pairs(data):\n    # A nested loop where both loops depend on the size of the input\n    pairs = []\n    for i in range(len(data)):\n        for j in range(len(data)):\n            if i != j:\n                pairs.append((data[i], data[j]))\n    return pairs\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(1)_template2_12_90c6",
+    "complexity_class": "O(1)",
+    "code": "\ndef perform_simple_calculation(a, b):\n    # Basic arithmetic operations are constant time\n    x = a * 2\n    y = b + 10\n    result = x - y\n    return result\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(n^2)_template2_6_c43d",
+    "complexity_class": "O(n^2)",
+    "code": "\ndef bubble_sort(data):\n    # The outer loop runs n times, and the inner loop runs up to n times\n    n = len(data)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if data[j] > data[j + 1]:\n                data[j], data[j + 1] = data[j + 1], data[j]\n    return data\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(logn)_template1_11_35a4",
+    "complexity_class": "O(log n)",
+    "code": "\ndef binary_search(sorted_list, value):\n    # Each step halves the search space\n    low = 0\n    high = len(sorted_list) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if sorted_list[mid] == value:\n            return mid\n        elif sorted_list[mid] < value:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template1_7_9ab0",
+    "complexity_class": "O(n log n)",
+    "code": "# A simple implementation\n\ndef merge_sort(data):\n    # Recursively dividing the list is O(log n)\n    # Merging the lists is O(n)\n    if len(data) > 1:\n        mid = len(data) // 2\n        left_half = data[:mid]\n        right_half = data[mid:]\n\n        merge_sort(left_half)\n        merge_sort(right_half)\n\n        i = j = k = 0\n        while i < len(left_half) and j < len(right_half):\n            if left_half[i] < right_half[j]:\n                data[k] = left_half[i]\n                i += 1\n            else:\n                data[k] = right_half[j]\n                j += 1\n            k += 1\n\n        while i < len(left_half):\n            data[k] = left_half[i]\n            i += 1\n            k += 1\n\n        while j < len(right_half):\n            data[k] = right_half[j]\n            j += 1\n            k += 1\n    return data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(logn)_template2_6_9d0f",
+    "complexity_class": "O(log n)",
+    "code": "\ndef find_power_of_two(n):\n    # This loop divides n by 2 in each iteration\n    i = 1\n    while i < n:\n        i *= 2\n    return i\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template1_3_9576",
+    "complexity_class": "O(n log n)",
+    "code": "\ndef merge_sort(data):\n    # Recursively dividing the list is O(log n)\n    # Merging the lists is O(n)\n    if len(data) > 1:\n        mid = len(data) // 2\n        left_half = data[:mid]\n        right_half = data[mid:]\n\n        merge_sort(left_half)\n        merge_sort(right_half)\n\n        i = j = k = 0\n        while i < len(left_half) and j < len(right_half):\n            if left_half[i] < right_half[j]:\n                data[k] = left_half[i]\n                i += 1\n            else:\n                data[k] = right_half[j]\n                j += 1\n            k += 1\n\n        while i < len(left_half):\n            data[k] = left_half[i]\n            i += 1\n            k += 1\n\n        while j < len(right_half):\n            data[k] = right_half[j]\n            j += 1\n            k += 1\n    return data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(1)_template2_14_f887",
+    "complexity_class": "O(1)",
+    "code": "\ndef perform_simple_calculation(a, b):\n    # Basic arithmetic operations are constant time\n    x = a * 2\n    y = b + 10\n    result = x - y\n    return result\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(n)_template2_1_b82d",
+    "complexity_class": "O(n)",
+    "code": "# A simple implementation\n\ndef find_element_in_list(data, target):\n    # In the worst case, we have to check every element\n    index = 0\n    while index < len(data):\n        if data[index] == target:\n            return index\n        index += 1\n    return -1\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(2^n)_template2_14_a3f2",
+    "complexity_class": "O(2^n)",
+    "code": "\ndef generate_all_subsets(input_list):\n    if not input_list:\n        return [[]]\n\n    first = input_list[0]\n    rest = input_list[1:]\n\n    subsets_without_first = generate_all_subsets(rest)\n    subsets_with_first = []\n\n    for subset in subsets_without_first:\n        subsets_with_first.append(subset + [first])\n\n    return subsets_without_first + subsets_with_first\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(n^2)_template1_4_8bdc",
+    "complexity_class": "O(n^2)",
+    "code": "# A simple implementation\n\ndef find_all_pairs(data):\n    # A nested loop where both loops depend on the size of the input\n    pairs = []\n    for i in range(len(data)):\n        for j in range(len(data)):\n            if i != j:\n                pairs.append((data[i], data[j]))\n    return pairs\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(1)_template1_14_3e9e",
+    "complexity_class": "O(1)",
+    "code": "\ndef get_first_element(input_list):\n    # Accessing by index is a constant time operation\n    if input_list:\n        return input_list[0]\n    return None\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(2^n)_template1_21_7dd8",
+    "complexity_class": "O(2^n)",
+    "code": "\ndef recursive_fibonacci(n):\n    # Each call branches into two more calls\n    if n <= 1:\n        return n\n    else:\n        return recursive_fibonacci(n - 1) + recursive_fibonacci(n - 2)\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(n)_template2_8_7418",
+    "complexity_class": "O(n)",
+    "code": "\ndef find_element_in_list(input_list, value):\n    # In the worst case, we have to check every element\n    index = 0\n    while index < len(input_list):\n        if input_list[index] == value:\n            return index\n        index += 1\n    return -1\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(2^n)_template1_15_213c",
+    "complexity_class": "O(2^n)",
+    "code": "\ndef recursive_fibonacci(n):\n    # Each call branches into two more calls\n    if n <= 1:\n        return n\n    else:\n        return recursive_fibonacci(n - 1) + recursive_fibonacci(n - 2)\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(n^2)_template1_8_917b",
+    "complexity_class": "O(n^2)",
+    "code": "\ndef find_all_pairs(input_list):\n    # A nested loop where both loops depend on the size of the input\n    pairs = []\n    for i in range(len(input_list)):\n        for j in range(len(input_list)):\n            if i != j:\n                pairs.append((input_list[i], input_list[j]))\n    return pairs\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(n^2)_template2_8_b7fc",
+    "complexity_class": "O(n^2)",
+    "code": "\ndef bubble_sort(input_list):\n    # The outer loop runs n times, and the inner loop runs up to n times\n    n = len(input_list)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if input_list[j] > input_list[j + 1]:\n                input_list[j], input_list[j + 1] = input_list[j + 1], input_list[j]\n    return input_list\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(2^n)_template2_3_23cb",
+    "complexity_class": "O(2^n)",
+    "code": "\ndef generate_all_subsets(data):\n    if not data:\n        return [[]]\n\n    first = data[0]\n    rest = data[1:]\n\n    subsets_without_first = generate_all_subsets(rest)\n    subsets_with_first = []\n\n    for subset in subsets_without_first:\n        subsets_with_first.append(subset + [first])\n\n    return subsets_without_first + subsets_with_first\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(n)_template2_6_34f8",
+    "complexity_class": "O(n)",
+    "code": "\ndef find_element_in_list(data, target):\n    # In the worst case, we have to check every element\n    index = 0\n    while index < len(data):\n        if data[index] == target:\n            return index\n        index += 1\n    return -1\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(n^2)_template2_10_65a1",
+    "complexity_class": "O(n^2)",
+    "code": "# A simple implementation\n\ndef bubble_sort(data):\n    # The outer loop runs n times, and the inner loop runs up to n times\n    n = len(data)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if data[j] > data[j + 1]:\n                data[j], data[j + 1] = data[j + 1], data[j]\n    return data\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(logn)_template1_19_cc22",
+    "complexity_class": "O(log n)",
+    "code": "# A simple implementation\n\ndef binary_search(sorted_list, target):\n    # Each step halves the search space\n    low = 0\n    high = len(sorted_list) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if sorted_list[mid] == target:\n            return mid\n        elif sorted_list[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(logn)_template2_17_07be",
+    "complexity_class": "O(log n)",
+    "code": "\ndef find_power_of_two(n):\n    # This loop divides n by 2 in each iteration\n    i = 1\n    while i < n:\n        i *= 2\n    return i\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(n)_template2_11_6e2a",
+    "complexity_class": "O(n)",
+    "code": "\ndef find_element_in_list(input_list, value):\n    # In the worst case, we have to check every element\n    index = 0\n    while index < len(input_list):\n        if input_list[index] == value:\n            return index\n        index += 1\n    return -1\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(n^2)_template2_15_2008",
+    "complexity_class": "O(n^2)",
+    "code": "\ndef bubble_sort(data):\n    # The outer loop runs n times, and the inner loop runs up to n times\n    n = len(data)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if data[j] > data[j + 1]:\n                data[j], data[j + 1] = data[j + 1], data[j]\n    return data\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(n^2)_template1_16_c026",
+    "complexity_class": "O(n^2)",
+    "code": "# A simple implementation\n\ndef find_all_pairs(data):\n    # A nested loop where both loops depend on the size of the input\n    pairs = []\n    for i in range(len(data)):\n        for j in range(len(data)):\n            if i != j:\n                pairs.append((data[i], data[j]))\n    return pairs\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(logn)_template2_22_bd1c",
+    "complexity_class": "O(log n)",
+    "code": "# A simple implementation\n\ndef find_power_of_two(n):\n    # This loop divides n by 2 in each iteration\n    i = 1\n    while i < n:\n        i *= 2\n    return i\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template2_19_9d1e",
+    "complexity_class": "O(n log n)",
+    "code": "# A simple implementation\n\nimport heapq\n\ndef heap_sort(data):\n    # Building a heap is O(n)\n    # Repeatedly extracting the min element is O(log n), done n times\n    heapq.heapify(data)\n    sorted_data = []\n    while data:\n        sorted_data.append(heapq.heappop(data))\n    return sorted_data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template1_21_0411",
+    "complexity_class": "O(n log n)",
+    "code": "\ndef merge_sort(data):\n    # Recursively dividing the list is O(log n)\n    # Merging the lists is O(n)\n    if len(data) > 1:\n        mid = len(data) // 2\n        left_half = data[:mid]\n        right_half = data[mid:]\n\n        merge_sort(left_half)\n        merge_sort(right_half)\n\n        i = j = k = 0\n        while i < len(left_half) and j < len(right_half):\n            if left_half[i] < right_half[j]:\n                data[k] = left_half[i]\n                i += 1\n            else:\n                data[k] = right_half[j]\n                j += 1\n            k += 1\n\n        while i < len(left_half):\n            data[k] = left_half[i]\n            i += 1\n            k += 1\n\n        while j < len(right_half):\n            data[k] = right_half[j]\n            j += 1\n            k += 1\n    return data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(logn)_template1_4_fdda",
+    "complexity_class": "O(log n)",
+    "code": "# A simple implementation\n\ndef binary_search(sorted_list, target):\n    # Each step halves the search space\n    low = 0\n    high = len(sorted_list) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if sorted_list[mid] == target:\n            return mid\n        elif sorted_list[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(n^2)_template1_15_e562",
+    "complexity_class": "O(n^2)",
+    "code": "\ndef find_all_pairs(data):\n    # A nested loop where both loops depend on the size of the input\n    pairs = []\n    for i in range(len(data)):\n        for j in range(len(data)):\n            if i != j:\n                pairs.append((data[i], data[j]))\n    return pairs\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(1)_template2_10_121d",
+    "complexity_class": "O(1)",
+    "code": "# A simple implementation\n\ndef perform_simple_calculation(a, b):\n    # Basic arithmetic operations are constant time\n    x = a * 2\n    y = b + 10\n    result = x - y\n    return result\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(n^2)_template1_22_6699",
+    "complexity_class": "O(n^2)",
+    "code": "# A simple implementation\n\ndef find_all_pairs(data):\n    # A nested loop where both loops depend on the size of the input\n    pairs = []\n    for i in range(len(data)):\n        for j in range(len(data)):\n            if i != j:\n                pairs.append((data[i], data[j]))\n    return pairs\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template2_14_034e",
+    "complexity_class": "O(n log n)",
+    "code": "\nimport heapq\n\ndef heap_sort(input_list):\n    # Building a heap is O(n)\n    # Repeatedly extracting the min element is O(log n), done n times\n    heapq.heapify(input_list)\n    sorted_input_list = []\n    while input_list:\n        sorted_input_list.append(heapq.heappop(input_list))\n    return sorted_input_list\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(1)_template1_16_b122",
+    "complexity_class": "O(1)",
+    "code": "# A simple implementation\n\ndef get_first_element(data):\n    # Accessing by index is a constant time operation\n    if data:\n        return data[0]\n    return None\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(2^n)_template1_22_7db0",
+    "complexity_class": "O(2^n)",
+    "code": "# A simple implementation\n\ndef recursive_fibonacci(n):\n    # Each call branches into two more calls\n    if n <= 1:\n        return n\n    else:\n        return recursive_fibonacci(n - 1) + recursive_fibonacci(n - 2)\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(n^2)_template2_3_312f",
+    "complexity_class": "O(n^2)",
+    "code": "\ndef bubble_sort(data):\n    # The outer loop runs n times, and the inner loop runs up to n times\n    n = len(data)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if data[j] > data[j + 1]:\n                data[j], data[j + 1] = data[j + 1], data[j]\n    return data\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(n^2)_template1_17_4686",
+    "complexity_class": "O(n^2)",
+    "code": "\ndef find_all_pairs(input_list):\n    # A nested loop where both loops depend on the size of the input\n    pairs = []\n    for i in range(len(input_list)):\n        for j in range(len(input_list)):\n            if i != j:\n                pairs.append((input_list[i], input_list[j]))\n    return pairs\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(n)_template1_22_b1ae",
+    "complexity_class": "O(n)",
+    "code": "# A simple implementation\n\ndef sum_list_elements(data):\n    # The loop runs once for each element in the list\n    total = 0\n    for item in data:\n        total += item\n    return total\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(n)_template1_6_f9b0",
+    "complexity_class": "O(n)",
+    "code": "\ndef sum_list_elements(data):\n    # The loop runs once for each element in the list\n    total = 0\n    for item in data:\n        total += item\n    return total\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(n)_template1_13_f200",
+    "complexity_class": "O(n)",
+    "code": "# A simple implementation\n\ndef sum_list_elements(data):\n    # The loop runs once for each element in the list\n    total = 0\n    for item in data:\n        total += item\n    return total\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(1)_template2_23_a8aa",
+    "complexity_class": "O(1)",
+    "code": "\ndef perform_simple_calculation(a, b):\n    # Basic arithmetic operations are constant time\n    x = a * 2\n    y = b + 10\n    result = x - y\n    return result\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(logn)_template2_15_6595",
+    "complexity_class": "O(log n)",
+    "code": "\ndef find_power_of_two(n):\n    # This loop divides n by 2 in each iteration\n    i = 1\n    while i < n:\n        i *= 2\n    return i\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(2^n)_template1_9_91a8",
+    "complexity_class": "O(2^n)",
+    "code": "\ndef recursive_fibonacci(n):\n    # Each call branches into two more calls\n    if n <= 1:\n        return n\n    else:\n        return recursive_fibonacci(n - 1) + recursive_fibonacci(n - 2)\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(2^n)_template1_1_60f6",
+    "complexity_class": "O(2^n)",
+    "code": "# A simple implementation\n\ndef recursive_fibonacci(n):\n    # Each call branches into two more calls\n    if n <= 1:\n        return n\n    else:\n        return recursive_fibonacci(n - 1) + recursive_fibonacci(n - 2)\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(1)_template1_12_0174",
+    "complexity_class": "O(1)",
+    "code": "\ndef get_first_element(data):\n    # Accessing by index is a constant time operation\n    if data:\n        return data[0]\n    return None\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(n^2)_template2_25_2bce",
+    "complexity_class": "O(n^2)",
+    "code": "# A simple implementation\n\ndef bubble_sort(data):\n    # The outer loop runs n times, and the inner loop runs up to n times\n    n = len(data)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if data[j] > data[j + 1]:\n                data[j], data[j + 1] = data[j + 1], data[j]\n    return data\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(n)_template2_20_e0d6",
+    "complexity_class": "O(n)",
+    "code": "\ndef find_element_in_list(input_list, value):\n    # In the worst case, we have to check every element\n    index = 0\n    while index < len(input_list):\n        if input_list[index] == value:\n            return index\n        index += 1\n    return -1\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template1_1_71c4",
+    "complexity_class": "O(n log n)",
+    "code": "# A simple implementation\n\ndef merge_sort(data):\n    # Recursively dividing the list is O(log n)\n    # Merging the lists is O(n)\n    if len(data) > 1:\n        mid = len(data) // 2\n        left_half = data[:mid]\n        right_half = data[mid:]\n\n        merge_sort(left_half)\n        merge_sort(right_half)\n\n        i = j = k = 0\n        while i < len(left_half) and j < len(right_half):\n            if left_half[i] < right_half[j]:\n                data[k] = left_half[i]\n                i += 1\n            else:\n                data[k] = right_half[j]\n                j += 1\n            k += 1\n\n        while i < len(left_half):\n            data[k] = left_half[i]\n            i += 1\n            k += 1\n\n        while j < len(right_half):\n            data[k] = right_half[j]\n            j += 1\n            k += 1\n    return data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(1)_template1_8_0095",
+    "complexity_class": "O(1)",
+    "code": "\ndef get_first_element(input_list):\n    # Accessing by index is a constant time operation\n    if input_list:\n        return input_list[0]\n    return None\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(n^2)_template2_23_2897",
+    "complexity_class": "O(n^2)",
+    "code": "\ndef bubble_sort(input_list):\n    # The outer loop runs n times, and the inner loop runs up to n times\n    n = len(input_list)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if input_list[j] > input_list[j + 1]:\n                input_list[j], input_list[j + 1] = input_list[j + 1], input_list[j]\n    return input_list\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(1)_template1_17_57e5",
+    "complexity_class": "O(1)",
+    "code": "\ndef get_first_element(input_list):\n    # Accessing by index is a constant time operation\n    if input_list:\n        return input_list[0]\n    return None\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(1)_template1_25_78e1",
+    "complexity_class": "O(1)",
+    "code": "# A simple implementation\n\ndef get_first_element(data):\n    # Accessing by index is a constant time operation\n    if data:\n        return data[0]\n    return None\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(logn)_template1_1_2503",
+    "complexity_class": "O(log n)",
+    "code": "# A simple implementation\n\ndef binary_search(sorted_list, target):\n    # Each step halves the search space\n    low = 0\n    high = len(sorted_list) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if sorted_list[mid] == target:\n            return mid\n        elif sorted_list[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(n^2)_template1_5_009c",
+    "complexity_class": "O(n^2)",
+    "code": "\ndef find_all_pairs(input_list):\n    # A nested loop where both loops depend on the size of the input\n    pairs = []\n    for i in range(len(input_list)):\n        for j in range(len(input_list)):\n            if i != j:\n                pairs.append((input_list[i], input_list[j]))\n    return pairs\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(1)_template1_21_3d53",
+    "complexity_class": "O(1)",
+    "code": "\ndef get_first_element(data):\n    # Accessing by index is a constant time operation\n    if data:\n        return data[0]\n    return None\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(1)_template2_7_7714",
+    "complexity_class": "O(1)",
+    "code": "# A simple implementation\n\ndef perform_simple_calculation(a, b):\n    # Basic arithmetic operations are constant time\n    x = a * 2\n    y = b + 10\n    result = x - y\n    return result\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template1_14_1b13",
+    "complexity_class": "O(n log n)",
+    "code": "\ndef merge_sort(input_list):\n    # Recursively dividing the list is O(log n)\n    # Merging the lists is O(n)\n    if len(input_list) > 1:\n        mid = len(input_list) // 2\n        left_half = input_list[:mid]\n        right_half = input_list[mid:]\n\n        merge_sort(left_half)\n        merge_sort(right_half)\n\n        i = j = k = 0\n        while i < len(left_half) and j < len(right_half):\n            if left_half[i] < right_half[j]:\n                input_list[k] = left_half[i]\n                i += 1\n            else:\n                input_list[k] = right_half[j]\n                j += 1\n            k += 1\n\n        while i < len(left_half):\n            input_list[k] = left_half[i]\n            i += 1\n            k += 1\n\n        while j < len(right_half):\n            input_list[k] = right_half[j]\n            j += 1\n            k += 1\n    return input_list\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(1)_template2_9_ab9c",
+    "complexity_class": "O(1)",
+    "code": "\ndef perform_simple_calculation(a, b):\n    # Basic arithmetic operations are constant time\n    x = a * 2\n    y = b + 10\n    result = x - y\n    return result\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(1)_template2_1_4941",
+    "complexity_class": "O(1)",
+    "code": "# A simple implementation\n\ndef perform_simple_calculation(a, b):\n    # Basic arithmetic operations are constant time\n    x = a * 2\n    y = b + 10\n    result = x - y\n    return result\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(2^n)_template1_5_6794",
+    "complexity_class": "O(2^n)",
+    "code": "\ndef recursive_fibonacci(n):\n    # Each call branches into two more calls\n    if n <= 1:\n        return n\n    else:\n        return recursive_fibonacci(n - 1) + recursive_fibonacci(n - 2)\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(n)_template2_3_dbb2",
+    "complexity_class": "O(n)",
+    "code": "\ndef find_element_in_list(data, target):\n    # In the worst case, we have to check every element\n    index = 0\n    while index < len(data):\n        if data[index] == target:\n            return index\n        index += 1\n    return -1\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(n^2)_template1_14_8091",
+    "complexity_class": "O(n^2)",
+    "code": "\ndef find_all_pairs(input_list):\n    # A nested loop where both loops depend on the size of the input\n    pairs = []\n    for i in range(len(input_list)):\n        for j in range(len(input_list)):\n            if i != j:\n                pairs.append((input_list[i], input_list[j]))\n    return pairs\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(1)_template2_17_b216",
+    "complexity_class": "O(1)",
+    "code": "\ndef perform_simple_calculation(a, b):\n    # Basic arithmetic operations are constant time\n    x = a * 2\n    y = b + 10\n    result = x - y\n    return result\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(2^n)_template2_11_0b6f",
+    "complexity_class": "O(2^n)",
+    "code": "\ndef generate_all_subsets(input_list):\n    if not input_list:\n        return [[]]\n\n    first = input_list[0]\n    rest = input_list[1:]\n\n    subsets_without_first = generate_all_subsets(rest)\n    subsets_with_first = []\n\n    for subset in subsets_without_first:\n        subsets_with_first.append(subset + [first])\n\n    return subsets_without_first + subsets_with_first\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template2_7_c423",
+    "complexity_class": "O(n log n)",
+    "code": "# A simple implementation\n\nimport heapq\n\ndef heap_sort(data):\n    # Building a heap is O(n)\n    # Repeatedly extracting the min element is O(log n), done n times\n    heapq.heapify(data)\n    sorted_data = []\n    while data:\n        sorted_data.append(heapq.heappop(data))\n    return sorted_data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(2^n)_template2_25_56ec",
+    "complexity_class": "O(2^n)",
+    "code": "# A simple implementation\n\ndef generate_all_subsets(data):\n    if not data:\n        return [[]]\n\n    first = data[0]\n    rest = data[1:]\n\n    subsets_without_first = generate_all_subsets(rest)\n    subsets_with_first = []\n\n    for subset in subsets_without_first:\n        subsets_with_first.append(subset + [first])\n\n    return subsets_without_first + subsets_with_first\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(2^n)_template1_12_96d1",
+    "complexity_class": "O(2^n)",
+    "code": "\ndef recursive_fibonacci(n):\n    # Each call branches into two more calls\n    if n <= 1:\n        return n\n    else:\n        return recursive_fibonacci(n - 1) + recursive_fibonacci(n - 2)\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(logn)_template1_23_4353",
+    "complexity_class": "O(log n)",
+    "code": "\ndef binary_search(sorted_list, value):\n    # Each step halves the search space\n    low = 0\n    high = len(sorted_list) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if sorted_list[mid] == value:\n            return mid\n        elif sorted_list[mid] < value:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(n^2)_template1_12_aaa8",
+    "complexity_class": "O(n^2)",
+    "code": "\ndef find_all_pairs(data):\n    # A nested loop where both loops depend on the size of the input\n    pairs = []\n    for i in range(len(data)):\n        for j in range(len(data)):\n            if i != j:\n                pairs.append((data[i], data[j]))\n    return pairs\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(logn)_template1_10_71dd",
+    "complexity_class": "O(log n)",
+    "code": "# A simple implementation\n\ndef binary_search(sorted_list, target):\n    # Each step halves the search space\n    low = 0\n    high = len(sorted_list) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if sorted_list[mid] == target:\n            return mid\n        elif sorted_list[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template1_19_ed1b",
+    "complexity_class": "O(n log n)",
+    "code": "# A simple implementation\n\ndef merge_sort(data):\n    # Recursively dividing the list is O(log n)\n    # Merging the lists is O(n)\n    if len(data) > 1:\n        mid = len(data) // 2\n        left_half = data[:mid]\n        right_half = data[mid:]\n\n        merge_sort(left_half)\n        merge_sort(right_half)\n\n        i = j = k = 0\n        while i < len(left_half) and j < len(right_half):\n            if left_half[i] < right_half[j]:\n                data[k] = left_half[i]\n                i += 1\n            else:\n                data[k] = right_half[j]\n                j += 1\n            k += 1\n\n        while i < len(left_half):\n            data[k] = left_half[i]\n            i += 1\n            k += 1\n\n        while j < len(right_half):\n            data[k] = right_half[j]\n            j += 1\n            k += 1\n    return data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(1)_template1_7_34b6",
+    "complexity_class": "O(1)",
+    "code": "# A simple implementation\n\ndef get_first_element(data):\n    # Accessing by index is a constant time operation\n    if data:\n        return data[0]\n    return None\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template1_23_7fc5",
+    "complexity_class": "O(n log n)",
+    "code": "\ndef merge_sort(input_list):\n    # Recursively dividing the list is O(log n)\n    # Merging the lists is O(n)\n    if len(input_list) > 1:\n        mid = len(input_list) // 2\n        left_half = input_list[:mid]\n        right_half = input_list[mid:]\n\n        merge_sort(left_half)\n        merge_sort(right_half)\n\n        i = j = k = 0\n        while i < len(left_half) and j < len(right_half):\n            if left_half[i] < right_half[j]:\n                input_list[k] = left_half[i]\n                i += 1\n            else:\n                input_list[k] = right_half[j]\n                j += 1\n            k += 1\n\n        while i < len(left_half):\n            input_list[k] = left_half[i]\n            i += 1\n            k += 1\n\n        while j < len(right_half):\n            input_list[k] = right_half[j]\n            j += 1\n            k += 1\n    return input_list\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(n)_template2_19_7232",
+    "complexity_class": "O(n)",
+    "code": "# A simple implementation\n\ndef find_element_in_list(data, target):\n    # In the worst case, we have to check every element\n    index = 0\n    while index < len(data):\n        if data[index] == target:\n            return index\n        index += 1\n    return -1\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(n)_template1_24_82e0",
+    "complexity_class": "O(n)",
+    "code": "\ndef sum_list_elements(data):\n    # The loop runs once for each element in the list\n    total = 0\n    for item in data:\n        total += item\n    return total\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(logn)_template1_7_13a9",
+    "complexity_class": "O(log n)",
+    "code": "# A simple implementation\n\ndef binary_search(sorted_list, target):\n    # Each step halves the search space\n    low = 0\n    high = len(sorted_list) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if sorted_list[mid] == target:\n            return mid\n        elif sorted_list[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(n^2)_template2_20_8798",
+    "complexity_class": "O(n^2)",
+    "code": "\ndef bubble_sort(input_list):\n    # The outer loop runs n times, and the inner loop runs up to n times\n    n = len(input_list)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if input_list[j] > input_list[j + 1]:\n                input_list[j], input_list[j + 1] = input_list[j + 1], input_list[j]\n    return input_list\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template1_12_e6ac",
+    "complexity_class": "O(n log n)",
+    "code": "\ndef merge_sort(data):\n    # Recursively dividing the list is O(log n)\n    # Merging the lists is O(n)\n    if len(data) > 1:\n        mid = len(data) // 2\n        left_half = data[:mid]\n        right_half = data[mid:]\n\n        merge_sort(left_half)\n        merge_sort(right_half)\n\n        i = j = k = 0\n        while i < len(left_half) and j < len(right_half):\n            if left_half[i] < right_half[j]:\n                data[k] = left_half[i]\n                i += 1\n            else:\n                data[k] = right_half[j]\n                j += 1\n            k += 1\n\n        while i < len(left_half):\n            data[k] = left_half[i]\n            i += 1\n            k += 1\n\n        while j < len(right_half):\n            data[k] = right_half[j]\n            j += 1\n            k += 1\n    return data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(2^n)_template1_7_123d",
+    "complexity_class": "O(2^n)",
+    "code": "# A simple implementation\n\ndef recursive_fibonacci(n):\n    # Each call branches into two more calls\n    if n <= 1:\n        return n\n    else:\n        return recursive_fibonacci(n - 1) + recursive_fibonacci(n - 2)\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(n^2)_template1_13_b866",
+    "complexity_class": "O(n^2)",
+    "code": "# A simple implementation\n\ndef find_all_pairs(data):\n    # A nested loop where both loops depend on the size of the input\n    pairs = []\n    for i in range(len(data)):\n        for j in range(len(data)):\n            if i != j:\n                pairs.append((data[i], data[j]))\n    return pairs\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(2^n)_template2_12_3021",
+    "complexity_class": "O(2^n)",
+    "code": "\ndef generate_all_subsets(data):\n    if not data:\n        return [[]]\n\n    first = data[0]\n    rest = data[1:]\n\n    subsets_without_first = generate_all_subsets(rest)\n    subsets_with_first = []\n\n    for subset in subsets_without_first:\n        subsets_with_first.append(subset + [first])\n\n    return subsets_without_first + subsets_with_first\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(2^n)_template1_13_9653",
+    "complexity_class": "O(2^n)",
+    "code": "# A simple implementation\n\ndef recursive_fibonacci(n):\n    # Each call branches into two more calls\n    if n <= 1:\n        return n\n    else:\n        return recursive_fibonacci(n - 1) + recursive_fibonacci(n - 2)\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(logn)_template2_21_cb67",
+    "complexity_class": "O(log n)",
+    "code": "\ndef find_power_of_two(n):\n    # This loop divides n by 2 in each iteration\n    i = 1\n    while i < n:\n        i *= 2\n    return i\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(2^n)_template2_23_24b3",
+    "complexity_class": "O(2^n)",
+    "code": "\ndef generate_all_subsets(input_list):\n    if not input_list:\n        return [[]]\n\n    first = input_list[0]\n    rest = input_list[1:]\n\n    subsets_without_first = generate_all_subsets(rest)\n    subsets_with_first = []\n\n    for subset in subsets_without_first:\n        subsets_with_first.append(subset + [first])\n\n    return subsets_without_first + subsets_with_first\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(1)_template2_16_36ce",
+    "complexity_class": "O(1)",
+    "code": "# A simple implementation\n\ndef perform_simple_calculation(a, b):\n    # Basic arithmetic operations are constant time\n    x = a * 2\n    y = b + 10\n    result = x - y\n    return result\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(n^2)_template2_13_cbf7",
+    "complexity_class": "O(n^2)",
+    "code": "# A simple implementation\n\ndef bubble_sort(data):\n    # The outer loop runs n times, and the inner loop runs up to n times\n    n = len(data)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if data[j] > data[j + 1]:\n                data[j], data[j + 1] = data[j + 1], data[j]\n    return data\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(1)_template1_13_cb72",
+    "complexity_class": "O(1)",
+    "code": "# A simple implementation\n\ndef get_first_element(data):\n    # Accessing by index is a constant time operation\n    if data:\n        return data[0]\n    return None\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(logn)_template1_13_aa4a",
+    "complexity_class": "O(log n)",
+    "code": "# A simple implementation\n\ndef binary_search(sorted_list, target):\n    # Each step halves the search space\n    low = 0\n    high = len(sorted_list) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if sorted_list[mid] == target:\n            return mid\n        elif sorted_list[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(n)_template1_18_6c8c",
+    "complexity_class": "O(n)",
+    "code": "\ndef sum_list_elements(data):\n    # The loop runs once for each element in the list\n    total = 0\n    for item in data:\n        total += item\n    return total\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(2^n)_template2_24_9fe2",
+    "complexity_class": "O(2^n)",
+    "code": "\ndef generate_all_subsets(data):\n    if not data:\n        return [[]]\n\n    first = data[0]\n    rest = data[1:]\n\n    subsets_without_first = generate_all_subsets(rest)\n    subsets_with_first = []\n\n    for subset in subsets_without_first:\n        subsets_with_first.append(subset + [first])\n\n    return subsets_without_first + subsets_with_first\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(2^n)_template2_20_faa1",
+    "complexity_class": "O(2^n)",
+    "code": "\ndef generate_all_subsets(input_list):\n    if not input_list:\n        return [[]]\n\n    first = input_list[0]\n    rest = input_list[1:]\n\n    subsets_without_first = generate_all_subsets(rest)\n    subsets_with_first = []\n\n    for subset in subsets_without_first:\n        subsets_with_first.append(subset + [first])\n\n    return subsets_without_first + subsets_with_first\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(logn)_template2_18_1983",
+    "complexity_class": "O(log n)",
+    "code": "\ndef find_power_of_two(n):\n    # This loop divides n by 2 in each iteration\n    i = 1\n    while i < n:\n        i *= 2\n    return i\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(1)_template2_21_3ccb",
+    "complexity_class": "O(1)",
+    "code": "\ndef perform_simple_calculation(a, b):\n    # Basic arithmetic operations are constant time\n    x = a * 2\n    y = b + 10\n    result = x - y\n    return result\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(n)_template1_16_8568",
+    "complexity_class": "O(n)",
+    "code": "# A simple implementation\n\ndef sum_list_elements(data):\n    # The loop runs once for each element in the list\n    total = 0\n    for item in data:\n        total += item\n    return total\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(n)_template1_14_7f70",
+    "complexity_class": "O(n)",
+    "code": "\ndef sum_list_elements(input_list):\n    # The loop runs once for each element in the list\n    total = 0\n    for item in input_list:\n        total += item\n    return total\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(n)_template2_13_d711",
+    "complexity_class": "O(n)",
+    "code": "# A simple implementation\n\ndef find_element_in_list(data, target):\n    # In the worst case, we have to check every element\n    index = 0\n    while index < len(data):\n        if data[index] == target:\n            return index\n        index += 1\n    return -1\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(n^2)_template2_19_620f",
+    "complexity_class": "O(n^2)",
+    "code": "# A simple implementation\n\ndef bubble_sort(data):\n    # The outer loop runs n times, and the inner loop runs up to n times\n    n = len(data)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if data[j] > data[j + 1]:\n                data[j], data[j + 1] = data[j + 1], data[j]\n    return data\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(logn)_template2_11_731a",
+    "complexity_class": "O(log n)",
+    "code": "\ndef find_power_of_two(n):\n    # This loop divides n by 2 in each iteration\n    i = 1\n    while i < n:\n        i *= 2\n    return i\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(n)_template2_23_93ce",
+    "complexity_class": "O(n)",
+    "code": "\ndef find_element_in_list(input_list, value):\n    # In the worst case, we have to check every element\n    index = 0\n    while index < len(input_list):\n        if input_list[index] == value:\n            return index\n        index += 1\n    return -1\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template2_22_9c65",
+    "complexity_class": "O(n log n)",
+    "code": "# A simple implementation\n\nimport heapq\n\ndef heap_sort(data):\n    # Building a heap is O(n)\n    # Repeatedly extracting the min element is O(log n), done n times\n    heapq.heapify(data)\n    sorted_data = []\n    while data:\n        sorted_data.append(heapq.heappop(data))\n    return sorted_data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(n)_template1_25_1a32",
+    "complexity_class": "O(n)",
+    "code": "# A simple implementation\n\ndef sum_list_elements(data):\n    # The loop runs once for each element in the list\n    total = 0\n    for item in data:\n        total += item\n    return total\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(logn)_template2_16_6121",
+    "complexity_class": "O(log n)",
+    "code": "# A simple implementation\n\ndef find_power_of_two(n):\n    # This loop divides n by 2 in each iteration\n    i = 1\n    while i < n:\n        i *= 2\n    return i\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(2^n)_template2_19_c0f4",
+    "complexity_class": "O(2^n)",
+    "code": "# A simple implementation\n\ndef generate_all_subsets(data):\n    if not data:\n        return [[]]\n\n    first = data[0]\n    rest = data[1:]\n\n    subsets_without_first = generate_all_subsets(rest)\n    subsets_with_first = []\n\n    for subset in subsets_without_first:\n        subsets_with_first.append(subset + [first])\n\n    return subsets_without_first + subsets_with_first\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(2^n)_template2_2_81f7",
+    "complexity_class": "O(2^n)",
+    "code": "\ndef generate_all_subsets(input_list):\n    if not input_list:\n        return [[]]\n\n    first = input_list[0]\n    rest = input_list[1:]\n\n    subsets_without_first = generate_all_subsets(rest)\n    subsets_with_first = []\n\n    for subset in subsets_without_first:\n        subsets_with_first.append(subset + [first])\n\n    return subsets_without_first + subsets_with_first\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(logn)_template2_3_cc29",
+    "complexity_class": "O(log n)",
+    "code": "\ndef find_power_of_two(n):\n    # This loop divides n by 2 in each iteration\n    i = 1\n    while i < n:\n        i *= 2\n    return i\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(2^n)_template1_23_f2eb",
+    "complexity_class": "O(2^n)",
+    "code": "\ndef recursive_fibonacci(n):\n    # Each call branches into two more calls\n    if n <= 1:\n        return n\n    else:\n        return recursive_fibonacci(n - 1) + recursive_fibonacci(n - 2)\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template2_9_bf2e",
+    "complexity_class": "O(n log n)",
+    "code": "\nimport heapq\n\ndef heap_sort(data):\n    # Building a heap is O(n)\n    # Repeatedly extracting the min element is O(log n), done n times\n    heapq.heapify(data)\n    sorted_data = []\n    while data:\n        sorted_data.append(heapq.heappop(data))\n    return sorted_data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(2^n)_template2_8_483c",
+    "complexity_class": "O(2^n)",
+    "code": "\ndef generate_all_subsets(input_list):\n    if not input_list:\n        return [[]]\n\n    first = input_list[0]\n    rest = input_list[1:]\n\n    subsets_without_first = generate_all_subsets(rest)\n    subsets_with_first = []\n\n    for subset in subsets_without_first:\n        subsets_with_first.append(subset + [first])\n\n    return subsets_without_first + subsets_with_first\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(2^n)_template2_13_8dcb",
+    "complexity_class": "O(2^n)",
+    "code": "# A simple implementation\n\ndef generate_all_subsets(data):\n    if not data:\n        return [[]]\n\n    first = data[0]\n    rest = data[1:]\n\n    subsets_without_first = generate_all_subsets(rest)\n    subsets_with_first = []\n\n    for subset in subsets_without_first:\n        subsets_with_first.append(subset + [first])\n\n    return subsets_without_first + subsets_with_first\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(2^n)_template1_16_5db2",
+    "complexity_class": "O(2^n)",
+    "code": "# A simple implementation\n\ndef recursive_fibonacci(n):\n    # Each call branches into two more calls\n    if n <= 1:\n        return n\n    else:\n        return recursive_fibonacci(n - 1) + recursive_fibonacci(n - 2)\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(1)_template1_15_fdd8",
+    "complexity_class": "O(1)",
+    "code": "\ndef get_first_element(data):\n    # Accessing by index is a constant time operation\n    if data:\n        return data[0]\n    return None\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(2^n)_template2_1_db45",
+    "complexity_class": "O(2^n)",
+    "code": "# A simple implementation\n\ndef generate_all_subsets(data):\n    if not data:\n        return [[]]\n\n    first = data[0]\n    rest = data[1:]\n\n    subsets_without_first = generate_all_subsets(rest)\n    subsets_with_first = []\n\n    for subset in subsets_without_first:\n        subsets_with_first.append(subset + [first])\n\n    return subsets_without_first + subsets_with_first\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(n)_template2_12_16bf",
+    "complexity_class": "O(n)",
+    "code": "\ndef find_element_in_list(data, target):\n    # In the worst case, we have to check every element\n    index = 0\n    while index < len(data):\n        if data[index] == target:\n            return index\n        index += 1\n    return -1\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template2_12_eafd",
+    "complexity_class": "O(n log n)",
+    "code": "\nimport heapq\n\ndef heap_sort(data):\n    # Building a heap is O(n)\n    # Repeatedly extracting the min element is O(log n), done n times\n    heapq.heapify(data)\n    sorted_data = []\n    while data:\n        sorted_data.append(heapq.heappop(data))\n    return sorted_data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(n^2)_template2_22_d00a",
+    "complexity_class": "O(n^2)",
+    "code": "# A simple implementation\n\ndef bubble_sort(data):\n    # The outer loop runs n times, and the inner loop runs up to n times\n    n = len(data)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if data[j] > data[j + 1]:\n                data[j], data[j + 1] = data[j + 1], data[j]\n    return data\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(n^2)_template1_7_f5c4",
+    "complexity_class": "O(n^2)",
+    "code": "# A simple implementation\n\ndef find_all_pairs(data):\n    # A nested loop where both loops depend on the size of the input\n    pairs = []\n    for i in range(len(data)):\n        for j in range(len(data)):\n            if i != j:\n                pairs.append((data[i], data[j]))\n    return pairs\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(1)_template1_4_8a29",
+    "complexity_class": "O(1)",
+    "code": "# A simple implementation\n\ndef get_first_element(data):\n    # Accessing by index is a constant time operation\n    if data:\n        return data[0]\n    return None\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(1)_template1_20_7c5b",
+    "complexity_class": "O(1)",
+    "code": "\ndef get_first_element(input_list):\n    # Accessing by index is a constant time operation\n    if input_list:\n        return input_list[0]\n    return None\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(n)_template1_2_7d1d",
+    "complexity_class": "O(n)",
+    "code": "\ndef sum_list_elements(input_list):\n    # The loop runs once for each element in the list\n    total = 0\n    for item in input_list:\n        total += item\n    return total\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(n)_template1_5_8505",
+    "complexity_class": "O(n)",
+    "code": "\ndef sum_list_elements(input_list):\n    # The loop runs once for each element in the list\n    total = 0\n    for item in input_list:\n        total += item\n    return total\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(n)_template2_14_d0a3",
+    "complexity_class": "O(n)",
+    "code": "\ndef find_element_in_list(input_list, value):\n    # In the worst case, we have to check every element\n    index = 0\n    while index < len(input_list):\n        if input_list[index] == value:\n            return index\n        index += 1\n    return -1\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(n^2)_template1_9_e39a",
+    "complexity_class": "O(n^2)",
+    "code": "\ndef find_all_pairs(data):\n    # A nested loop where both loops depend on the size of the input\n    pairs = []\n    for i in range(len(data)):\n        for j in range(len(data)):\n            if i != j:\n                pairs.append((data[i], data[j]))\n    return pairs\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template2_3_e0d0",
+    "complexity_class": "O(n log n)",
+    "code": "\nimport heapq\n\ndef heap_sort(data):\n    # Building a heap is O(n)\n    # Repeatedly extracting the min element is O(log n), done n times\n    heapq.heapify(data)\n    sorted_data = []\n    while data:\n        sorted_data.append(heapq.heappop(data))\n    return sorted_data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(logn)_template2_13_5a99",
+    "complexity_class": "O(log n)",
+    "code": "# A simple implementation\n\ndef find_power_of_two(n):\n    # This loop divides n by 2 in each iteration\n    i = 1\n    while i < n:\n        i *= 2\n    return i\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(n)_template1_17_73cc",
+    "complexity_class": "O(n)",
+    "code": "\ndef sum_list_elements(input_list):\n    # The loop runs once for each element in the list\n    total = 0\n    for item in input_list:\n        total += item\n    return total\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(n)_template2_16_baf5",
+    "complexity_class": "O(n)",
+    "code": "# A simple implementation\n\ndef find_element_in_list(data, target):\n    # In the worst case, we have to check every element\n    index = 0\n    while index < len(data):\n        if data[index] == target:\n            return index\n        index += 1\n    return -1\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template2_17_34e5",
+    "complexity_class": "O(n log n)",
+    "code": "\nimport heapq\n\ndef heap_sort(input_list):\n    # Building a heap is O(n)\n    # Repeatedly extracting the min element is O(log n), done n times\n    heapq.heapify(input_list)\n    sorted_input_list = []\n    while input_list:\n        sorted_input_list.append(heapq.heappop(input_list))\n    return sorted_input_list\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(1)_template1_6_642d",
+    "complexity_class": "O(1)",
+    "code": "\ndef get_first_element(data):\n    # Accessing by index is a constant time operation\n    if data:\n        return data[0]\n    return None\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template2_8_cff1",
+    "complexity_class": "O(n log n)",
+    "code": "\nimport heapq\n\ndef heap_sort(input_list):\n    # Building a heap is O(n)\n    # Repeatedly extracting the min element is O(log n), done n times\n    heapq.heapify(input_list)\n    sorted_input_list = []\n    while input_list:\n        sorted_input_list.append(heapq.heappop(input_list))\n    return sorted_input_list\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(n)_template1_8_fcae",
+    "complexity_class": "O(n)",
+    "code": "\ndef sum_list_elements(input_list):\n    # The loop runs once for each element in the list\n    total = 0\n    for item in input_list:\n        total += item\n    return total\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(1)_template2_8_89c7",
+    "complexity_class": "O(1)",
+    "code": "\ndef perform_simple_calculation(a, b):\n    # Basic arithmetic operations are constant time\n    x = a * 2\n    y = b + 10\n    result = x - y\n    return result\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(n)_template2_5_406c",
+    "complexity_class": "O(n)",
+    "code": "\ndef find_element_in_list(input_list, value):\n    # In the worst case, we have to check every element\n    index = 0\n    while index < len(input_list):\n        if input_list[index] == value:\n            return index\n        index += 1\n    return -1\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template1_20_f32a",
+    "complexity_class": "O(n log n)",
+    "code": "\ndef merge_sort(input_list):\n    # Recursively dividing the list is O(log n)\n    # Merging the lists is O(n)\n    if len(input_list) > 1:\n        mid = len(input_list) // 2\n        left_half = input_list[:mid]\n        right_half = input_list[mid:]\n\n        merge_sort(left_half)\n        merge_sort(right_half)\n\n        i = j = k = 0\n        while i < len(left_half) and j < len(right_half):\n            if left_half[i] < right_half[j]:\n                input_list[k] = left_half[i]\n                i += 1\n            else:\n                input_list[k] = right_half[j]\n                j += 1\n            k += 1\n\n        while i < len(left_half):\n            input_list[k] = left_half[i]\n            i += 1\n            k += 1\n\n        while j < len(right_half):\n            input_list[k] = right_half[j]\n            j += 1\n            k += 1\n    return input_list\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(1)_template1_1_4f7e",
+    "complexity_class": "O(1)",
+    "code": "# A simple implementation\n\ndef get_first_element(data):\n    # Accessing by index is a constant time operation\n    if data:\n        return data[0]\n    return None\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(2^n)_template2_18_9e27",
+    "complexity_class": "O(2^n)",
+    "code": "\ndef generate_all_subsets(data):\n    if not data:\n        return [[]]\n\n    first = data[0]\n    rest = data[1:]\n\n    subsets_without_first = generate_all_subsets(rest)\n    subsets_with_first = []\n\n    for subset in subsets_without_first:\n        subsets_with_first.append(subset + [first])\n\n    return subsets_without_first + subsets_with_first\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(n^2)_template1_25_cbcd",
+    "complexity_class": "O(n^2)",
+    "code": "# A simple implementation\n\ndef find_all_pairs(data):\n    # A nested loop where both loops depend on the size of the input\n    pairs = []\n    for i in range(len(data)):\n        for j in range(len(data)):\n            if i != j:\n                pairs.append((data[i], data[j]))\n    return pairs\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(logn)_template1_3_e43b",
+    "complexity_class": "O(log n)",
+    "code": "\ndef binary_search(sorted_list, target):\n    # Each step halves the search space\n    low = 0\n    high = len(sorted_list) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if sorted_list[mid] == target:\n            return mid\n        elif sorted_list[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template1_9_dadb",
+    "complexity_class": "O(n log n)",
+    "code": "\ndef merge_sort(data):\n    # Recursively dividing the list is O(log n)\n    # Merging the lists is O(n)\n    if len(data) > 1:\n        mid = len(data) // 2\n        left_half = data[:mid]\n        right_half = data[mid:]\n\n        merge_sort(left_half)\n        merge_sort(right_half)\n\n        i = j = k = 0\n        while i < len(left_half) and j < len(right_half):\n            if left_half[i] < right_half[j]:\n                data[k] = left_half[i]\n                i += 1\n            else:\n                data[k] = right_half[j]\n                j += 1\n            k += 1\n\n        while i < len(left_half):\n            data[k] = left_half[i]\n            i += 1\n            k += 1\n\n        while j < len(right_half):\n            data[k] = right_half[j]\n            j += 1\n            k += 1\n    return data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(n^2)_template2_11_735d",
+    "complexity_class": "O(n^2)",
+    "code": "\ndef bubble_sort(input_list):\n    # The outer loop runs n times, and the inner loop runs up to n times\n    n = len(input_list)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if input_list[j] > input_list[j + 1]:\n                input_list[j], input_list[j + 1] = input_list[j + 1], input_list[j]\n    return input_list\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(2^n)_template2_17_5642",
+    "complexity_class": "O(2^n)",
+    "code": "\ndef generate_all_subsets(input_list):\n    if not input_list:\n        return [[]]\n\n    first = input_list[0]\n    rest = input_list[1:]\n\n    subsets_without_first = generate_all_subsets(rest)\n    subsets_with_first = []\n\n    for subset in subsets_without_first:\n        subsets_with_first.append(subset + [first])\n\n    return subsets_without_first + subsets_with_first\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(n)_template2_15_593e",
+    "complexity_class": "O(n)",
+    "code": "\ndef find_element_in_list(data, target):\n    # In the worst case, we have to check every element\n    index = 0\n    while index < len(data):\n        if data[index] == target:\n            return index\n        index += 1\n    return -1\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(logn)_template1_15_5a42",
+    "complexity_class": "O(log n)",
+    "code": "\ndef binary_search(sorted_list, target):\n    # Each step halves the search space\n    low = 0\n    high = len(sorted_list) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if sorted_list[mid] == target:\n            return mid\n        elif sorted_list[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(1)_template2_19_5729",
+    "complexity_class": "O(1)",
+    "code": "# A simple implementation\n\ndef perform_simple_calculation(a, b):\n    # Basic arithmetic operations are constant time\n    x = a * 2\n    y = b + 10\n    result = x - y\n    return result\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(n)_template1_10_0c94",
+    "complexity_class": "O(n)",
+    "code": "# A simple implementation\n\ndef sum_list_elements(data):\n    # The loop runs once for each element in the list\n    total = 0\n    for item in data:\n        total += item\n    return total\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(n)_template2_25_9be7",
+    "complexity_class": "O(n)",
+    "code": "# A simple implementation\n\ndef find_element_in_list(data, target):\n    # In the worst case, we have to check every element\n    index = 0\n    while index < len(data):\n        if data[index] == target:\n            return index\n        index += 1\n    return -1\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(2^n)_template1_25_2f0f",
+    "complexity_class": "O(2^n)",
+    "code": "# A simple implementation\n\ndef recursive_fibonacci(n):\n    # Each call branches into two more calls\n    if n <= 1:\n        return n\n    else:\n        return recursive_fibonacci(n - 1) + recursive_fibonacci(n - 2)\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(1)_template1_11_0590",
+    "complexity_class": "O(1)",
+    "code": "\ndef get_first_element(input_list):\n    # Accessing by index is a constant time operation\n    if input_list:\n        return input_list[0]\n    return None\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(logn)_template1_22_b465",
+    "complexity_class": "O(log n)",
+    "code": "# A simple implementation\n\ndef binary_search(sorted_list, target):\n    # Each step halves the search space\n    low = 0\n    high = len(sorted_list) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if sorted_list[mid] == target:\n            return mid\n        elif sorted_list[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template1_4_944f",
+    "complexity_class": "O(n log n)",
+    "code": "# A simple implementation\n\ndef merge_sort(data):\n    # Recursively dividing the list is O(log n)\n    # Merging the lists is O(n)\n    if len(data) > 1:\n        mid = len(data) // 2\n        left_half = data[:mid]\n        right_half = data[mid:]\n\n        merge_sort(left_half)\n        merge_sort(right_half)\n\n        i = j = k = 0\n        while i < len(left_half) and j < len(right_half):\n            if left_half[i] < right_half[j]:\n                data[k] = left_half[i]\n                i += 1\n            else:\n                data[k] = right_half[j]\n                j += 1\n            k += 1\n\n        while i < len(left_half):\n            data[k] = left_half[i]\n            i += 1\n            k += 1\n\n        while j < len(right_half):\n            data[k] = right_half[j]\n            j += 1\n            k += 1\n    return data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(n^2)_template2_14_ff4d",
+    "complexity_class": "O(n^2)",
+    "code": "\ndef bubble_sort(input_list):\n    # The outer loop runs n times, and the inner loop runs up to n times\n    n = len(input_list)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if input_list[j] > input_list[j + 1]:\n                input_list[j], input_list[j + 1] = input_list[j + 1], input_list[j]\n    return input_list\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(1)_template1_2_7f3a",
+    "complexity_class": "O(1)",
+    "code": "\ndef get_first_element(input_list):\n    # Accessing by index is a constant time operation\n    if input_list:\n        return input_list[0]\n    return None\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template1_17_a377",
+    "complexity_class": "O(n log n)",
+    "code": "\ndef merge_sort(input_list):\n    # Recursively dividing the list is O(log n)\n    # Merging the lists is O(n)\n    if len(input_list) > 1:\n        mid = len(input_list) // 2\n        left_half = input_list[:mid]\n        right_half = input_list[mid:]\n\n        merge_sort(left_half)\n        merge_sort(right_half)\n\n        i = j = k = 0\n        while i < len(left_half) and j < len(right_half):\n            if left_half[i] < right_half[j]:\n                input_list[k] = left_half[i]\n                i += 1\n            else:\n                input_list[k] = right_half[j]\n                j += 1\n            k += 1\n\n        while i < len(left_half):\n            input_list[k] = left_half[i]\n            i += 1\n            k += 1\n\n        while j < len(right_half):\n            input_list[k] = right_half[j]\n            j += 1\n            k += 1\n    return input_list\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(logn)_template2_9_ca42",
+    "complexity_class": "O(log n)",
+    "code": "\ndef find_power_of_two(n):\n    # This loop divides n by 2 in each iteration\n    i = 1\n    while i < n:\n        i *= 2\n    return i\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(logn)_template1_5_ca9f",
+    "complexity_class": "O(log n)",
+    "code": "\ndef binary_search(sorted_list, value):\n    # Each step halves the search space\n    low = 0\n    high = len(sorted_list) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if sorted_list[mid] == value:\n            return mid\n        elif sorted_list[mid] < value:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template2_11_58a3",
+    "complexity_class": "O(n log n)",
+    "code": "\nimport heapq\n\ndef heap_sort(input_list):\n    # Building a heap is O(n)\n    # Repeatedly extracting the min element is O(log n), done n times\n    heapq.heapify(input_list)\n    sorted_input_list = []\n    while input_list:\n        sorted_input_list.append(heapq.heappop(input_list))\n    return sorted_input_list\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(logn)_template1_21_7691",
+    "complexity_class": "O(log n)",
+    "code": "\ndef binary_search(sorted_list, target):\n    # Each step halves the search space\n    low = 0\n    high = len(sorted_list) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if sorted_list[mid] == target:\n            return mid\n        elif sorted_list[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(n)_template2_22_26a3",
+    "complexity_class": "O(n)",
+    "code": "# A simple implementation\n\ndef find_element_in_list(data, target):\n    # In the worst case, we have to check every element\n    index = 0\n    while index < len(data):\n        if data[index] == target:\n            return index\n        index += 1\n    return -1\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(2^n)_template1_2_97b4",
+    "complexity_class": "O(2^n)",
+    "code": "\ndef recursive_fibonacci(n):\n    # Each call branches into two more calls\n    if n <= 1:\n        return n\n    else:\n        return recursive_fibonacci(n - 1) + recursive_fibonacci(n - 2)\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template1_6_770b",
+    "complexity_class": "O(n log n)",
+    "code": "\ndef merge_sort(data):\n    # Recursively dividing the list is O(log n)\n    # Merging the lists is O(n)\n    if len(data) > 1:\n        mid = len(data) // 2\n        left_half = data[:mid]\n        right_half = data[mid:]\n\n        merge_sort(left_half)\n        merge_sort(right_half)\n\n        i = j = k = 0\n        while i < len(left_half) and j < len(right_half):\n            if left_half[i] < right_half[j]:\n                data[k] = left_half[i]\n                i += 1\n            else:\n                data[k] = right_half[j]\n                j += 1\n            k += 1\n\n        while i < len(left_half):\n            data[k] = left_half[i]\n            i += 1\n            k += 1\n\n        while j < len(right_half):\n            data[k] = right_half[j]\n            j += 1\n            k += 1\n    return data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(n^2)_template2_16_701d",
+    "complexity_class": "O(n^2)",
+    "code": "# A simple implementation\n\ndef bubble_sort(data):\n    # The outer loop runs n times, and the inner loop runs up to n times\n    n = len(data)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if data[j] > data[j + 1]:\n                data[j], data[j + 1] = data[j + 1], data[j]\n    return data\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(2^n)_template1_8_c813",
+    "complexity_class": "O(2^n)",
+    "code": "\ndef recursive_fibonacci(n):\n    # Each call branches into two more calls\n    if n <= 1:\n        return n\n    else:\n        return recursive_fibonacci(n - 1) + recursive_fibonacci(n - 2)\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template1_22_c120",
+    "complexity_class": "O(n log n)",
+    "code": "# A simple implementation\n\ndef merge_sort(data):\n    # Recursively dividing the list is O(log n)\n    # Merging the lists is O(n)\n    if len(data) > 1:\n        mid = len(data) // 2\n        left_half = data[:mid]\n        right_half = data[mid:]\n\n        merge_sort(left_half)\n        merge_sort(right_half)\n\n        i = j = k = 0\n        while i < len(left_half) and j < len(right_half):\n            if left_half[i] < right_half[j]:\n                data[k] = left_half[i]\n                i += 1\n            else:\n                data[k] = right_half[j]\n                j += 1\n            k += 1\n\n        while i < len(left_half):\n            data[k] = left_half[i]\n            i += 1\n            k += 1\n\n        while j < len(right_half):\n            data[k] = right_half[j]\n            j += 1\n            k += 1\n    return data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(2^n)_template2_15_65f6",
+    "complexity_class": "O(2^n)",
+    "code": "\ndef generate_all_subsets(data):\n    if not data:\n        return [[]]\n\n    first = data[0]\n    rest = data[1:]\n\n    subsets_without_first = generate_all_subsets(rest)\n    subsets_with_first = []\n\n    for subset in subsets_without_first:\n        subsets_with_first.append(subset + [first])\n\n    return subsets_without_first + subsets_with_first\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(2^n)_template1_3_9e4c",
+    "complexity_class": "O(2^n)",
+    "code": "\ndef recursive_fibonacci(n):\n    # Each call branches into two more calls\n    if n <= 1:\n        return n\n    else:\n        return recursive_fibonacci(n - 1) + recursive_fibonacci(n - 2)\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(logn)_template2_25_75a4",
+    "complexity_class": "O(log n)",
+    "code": "# A simple implementation\n\ndef find_power_of_two(n):\n    # This loop divides n by 2 in each iteration\n    i = 1\n    while i < n:\n        i *= 2\n    return i\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(1)_template2_3_3c32",
+    "complexity_class": "O(1)",
+    "code": "\ndef perform_simple_calculation(a, b):\n    # Basic arithmetic operations are constant time\n    x = a * 2\n    y = b + 10\n    result = x - y\n    return result\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(n^2)_template1_21_5183",
+    "complexity_class": "O(n^2)",
+    "code": "\ndef find_all_pairs(data):\n    # A nested loop where both loops depend on the size of the input\n    pairs = []\n    for i in range(len(data)):\n        for j in range(len(data)):\n            if i != j:\n                pairs.append((data[i], data[j]))\n    return pairs\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(n^2)_template1_19_5dc9",
+    "complexity_class": "O(n^2)",
+    "code": "# A simple implementation\n\ndef find_all_pairs(data):\n    # A nested loop where both loops depend on the size of the input\n    pairs = []\n    for i in range(len(data)):\n        for j in range(len(data)):\n            if i != j:\n                pairs.append((data[i], data[j]))\n    return pairs\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template1_16_a411",
+    "complexity_class": "O(n log n)",
+    "code": "# A simple implementation\n\ndef merge_sort(data):\n    # Recursively dividing the list is O(log n)\n    # Merging the lists is O(n)\n    if len(data) > 1:\n        mid = len(data) // 2\n        left_half = data[:mid]\n        right_half = data[mid:]\n\n        merge_sort(left_half)\n        merge_sort(right_half)\n\n        i = j = k = 0\n        while i < len(left_half) and j < len(right_half):\n            if left_half[i] < right_half[j]:\n                data[k] = left_half[i]\n                i += 1\n            else:\n                data[k] = right_half[j]\n                j += 1\n            k += 1\n\n        while i < len(left_half):\n            data[k] = left_half[i]\n            i += 1\n            k += 1\n\n        while j < len(right_half):\n            data[k] = right_half[j]\n            j += 1\n            k += 1\n    return data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(logn)_template2_20_eb19",
+    "complexity_class": "O(log n)",
+    "code": "\ndef find_power_of_two(n):\n    # This loop divides n by 2 in each iteration\n    i = 1\n    while i < n:\n        i *= 2\n    return i\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(n^2)_template2_7_25a5",
+    "complexity_class": "O(n^2)",
+    "code": "# A simple implementation\n\ndef bubble_sort(data):\n    # The outer loop runs n times, and the inner loop runs up to n times\n    n = len(data)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if data[j] > data[j + 1]:\n                data[j], data[j + 1] = data[j + 1], data[j]\n    return data\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(2^n)_template1_6_aaed",
+    "complexity_class": "O(2^n)",
+    "code": "\ndef recursive_fibonacci(n):\n    # Each call branches into two more calls\n    if n <= 1:\n        return n\n    else:\n        return recursive_fibonacci(n - 1) + recursive_fibonacci(n - 2)\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template2_6_5d49",
+    "complexity_class": "O(n log n)",
+    "code": "\nimport heapq\n\ndef heap_sort(data):\n    # Building a heap is O(n)\n    # Repeatedly extracting the min element is O(log n), done n times\n    heapq.heapify(data)\n    sorted_data = []\n    while data:\n        sorted_data.append(heapq.heappop(data))\n    return sorted_data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(n)_template1_15_4dc9",
+    "complexity_class": "O(n)",
+    "code": "\ndef sum_list_elements(data):\n    # The loop runs once for each element in the list\n    total = 0\n    for item in data:\n        total += item\n    return total\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(n)_template2_17_d93f",
+    "complexity_class": "O(n)",
+    "code": "\ndef find_element_in_list(input_list, value):\n    # In the worst case, we have to check every element\n    index = 0\n    while index < len(input_list):\n        if input_list[index] == value:\n            return index\n        index += 1\n    return -1\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(logn)_template1_8_7a38",
+    "complexity_class": "O(log n)",
+    "code": "\ndef binary_search(sorted_list, value):\n    # Each step halves the search space\n    low = 0\n    high = len(sorted_list) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if sorted_list[mid] == value:\n            return mid\n        elif sorted_list[mid] < value:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(logn)_template2_7_6cae",
+    "complexity_class": "O(log n)",
+    "code": "# A simple implementation\n\ndef find_power_of_two(n):\n    # This loop divides n by 2 in each iteration\n    i = 1\n    while i < n:\n        i *= 2\n    return i\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(n^2)_template1_6_f240",
+    "complexity_class": "O(n^2)",
+    "code": "\ndef find_all_pairs(data):\n    # A nested loop where both loops depend on the size of the input\n    pairs = []\n    for i in range(len(data)):\n        for j in range(len(data)):\n            if i != j:\n                pairs.append((data[i], data[j]))\n    return pairs\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(n^2)_template2_24_43ae",
+    "complexity_class": "O(n^2)",
+    "code": "\ndef bubble_sort(data):\n    # The outer loop runs n times, and the inner loop runs up to n times\n    n = len(data)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if data[j] > data[j + 1]:\n                data[j], data[j + 1] = data[j + 1], data[j]\n    return data\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(1)_template2_13_a822",
+    "complexity_class": "O(1)",
+    "code": "# A simple implementation\n\ndef perform_simple_calculation(a, b):\n    # Basic arithmetic operations are constant time\n    x = a * 2\n    y = b + 10\n    result = x - y\n    return result\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(n)_template1_19_7615",
+    "complexity_class": "O(n)",
+    "code": "# A simple implementation\n\ndef sum_list_elements(data):\n    # The loop runs once for each element in the list\n    total = 0\n    for item in data:\n        total += item\n    return total\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(1)_template1_18_7a74",
+    "complexity_class": "O(1)",
+    "code": "\ndef get_first_element(data):\n    # Accessing by index is a constant time operation\n    if data:\n        return data[0]\n    return None\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(n^2)_template1_24_d28f",
+    "complexity_class": "O(n^2)",
+    "code": "\ndef find_all_pairs(data):\n    # A nested loop where both loops depend on the size of the input\n    pairs = []\n    for i in range(len(data)):\n        for j in range(len(data)):\n            if i != j:\n                pairs.append((data[i], data[j]))\n    return pairs\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(logn)_template2_24_8815",
+    "complexity_class": "O(log n)",
+    "code": "\ndef find_power_of_two(n):\n    # This loop divides n by 2 in each iteration\n    i = 1\n    while i < n:\n        i *= 2\n    return i\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(n)_template1_3_12b6",
+    "complexity_class": "O(n)",
+    "code": "\ndef sum_list_elements(data):\n    # The loop runs once for each element in the list\n    total = 0\n    for item in data:\n        total += item\n    return total\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(n^2)_template2_21_3ce9",
+    "complexity_class": "O(n^2)",
+    "code": "\ndef bubble_sort(data):\n    # The outer loop runs n times, and the inner loop runs up to n times\n    n = len(data)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if data[j] > data[j + 1]:\n                data[j], data[j + 1] = data[j + 1], data[j]\n    return data\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(1)_template1_19_66ae",
+    "complexity_class": "O(1)",
+    "code": "# A simple implementation\n\ndef get_first_element(data):\n    # Accessing by index is a constant time operation\n    if data:\n        return data[0]\n    return None\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(n)_template2_10_d1d8",
+    "complexity_class": "O(n)",
+    "code": "# A simple implementation\n\ndef find_element_in_list(data, target):\n    # In the worst case, we have to check every element\n    index = 0\n    while index < len(data):\n        if data[index] == target:\n            return index\n        index += 1\n    return -1\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(n^2)_template1_10_706a",
+    "complexity_class": "O(n^2)",
+    "code": "# A simple implementation\n\ndef find_all_pairs(data):\n    # A nested loop where both loops depend on the size of the input\n    pairs = []\n    for i in range(len(data)):\n        for j in range(len(data)):\n            if i != j:\n                pairs.append((data[i], data[j]))\n    return pairs\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template2_1_9739",
+    "complexity_class": "O(n log n)",
+    "code": "# A simple implementation\n\nimport heapq\n\ndef heap_sort(data):\n    # Building a heap is O(n)\n    # Repeatedly extracting the min element is O(log n), done n times\n    heapq.heapify(data)\n    sorted_data = []\n    while data:\n        sorted_data.append(heapq.heappop(data))\n    return sorted_data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(2^n)_template2_6_89f7",
+    "complexity_class": "O(2^n)",
+    "code": "\ndef generate_all_subsets(data):\n    if not data:\n        return [[]]\n\n    first = data[0]\n    rest = data[1:]\n\n    subsets_without_first = generate_all_subsets(rest)\n    subsets_with_first = []\n\n    for subset in subsets_without_first:\n        subsets_with_first.append(subset + [first])\n\n    return subsets_without_first + subsets_with_first\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(n)_template1_23_0bd6",
+    "complexity_class": "O(n)",
+    "code": "\ndef sum_list_elements(input_list):\n    # The loop runs once for each element in the list\n    total = 0\n    for item in input_list:\n        total += item\n    return total\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(logn)_template2_8_cb0c",
+    "complexity_class": "O(log n)",
+    "code": "\ndef find_power_of_two(n):\n    # This loop divides n by 2 in each iteration\n    i = 1\n    while i < n:\n        i *= 2\n    return i\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(n^2)_template1_2_150d",
+    "complexity_class": "O(n^2)",
+    "code": "\ndef find_all_pairs(input_list):\n    # A nested loop where both loops depend on the size of the input\n    pairs = []\n    for i in range(len(input_list)):\n        for j in range(len(input_list)):\n            if i != j:\n                pairs.append((input_list[i], input_list[j]))\n    return pairs\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template2_10_10df",
+    "complexity_class": "O(n log n)",
+    "code": "# A simple implementation\n\nimport heapq\n\ndef heap_sort(data):\n    # Building a heap is O(n)\n    # Repeatedly extracting the min element is O(log n), done n times\n    heapq.heapify(data)\n    sorted_data = []\n    while data:\n        sorted_data.append(heapq.heappop(data))\n    return sorted_data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(2^n)_template2_4_a4cc",
+    "complexity_class": "O(2^n)",
+    "code": "# A simple implementation\n\ndef generate_all_subsets(data):\n    if not data:\n        return [[]]\n\n    first = data[0]\n    rest = data[1:]\n\n    subsets_without_first = generate_all_subsets(rest)\n    subsets_with_first = []\n\n    for subset in subsets_without_first:\n        subsets_with_first.append(subset + [first])\n\n    return subsets_without_first + subsets_with_first\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(2^n)_template1_14_dc29",
+    "complexity_class": "O(2^n)",
+    "code": "\ndef recursive_fibonacci(n):\n    # Each call branches into two more calls\n    if n <= 1:\n        return n\n    else:\n        return recursive_fibonacci(n - 1) + recursive_fibonacci(n - 2)\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(logn)_template1_25_7105",
+    "complexity_class": "O(log n)",
+    "code": "# A simple implementation\n\ndef binary_search(sorted_list, target):\n    # Each step halves the search space\n    low = 0\n    high = len(sorted_list) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if sorted_list[mid] == target:\n            return mid\n        elif sorted_list[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template1_15_405a",
+    "complexity_class": "O(n log n)",
+    "code": "\ndef merge_sort(data):\n    # Recursively dividing the list is O(log n)\n    # Merging the lists is O(n)\n    if len(data) > 1:\n        mid = len(data) // 2\n        left_half = data[:mid]\n        right_half = data[mid:]\n\n        merge_sort(left_half)\n        merge_sort(right_half)\n\n        i = j = k = 0\n        while i < len(left_half) and j < len(right_half):\n            if left_half[i] < right_half[j]:\n                data[k] = left_half[i]\n                i += 1\n            else:\n                data[k] = right_half[j]\n                j += 1\n            k += 1\n\n        while i < len(left_half):\n            data[k] = left_half[i]\n            i += 1\n            k += 1\n\n        while j < len(right_half):\n            data[k] = right_half[j]\n            j += 1\n            k += 1\n    return data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template2_23_82fa",
+    "complexity_class": "O(n log n)",
+    "code": "\nimport heapq\n\ndef heap_sort(input_list):\n    # Building a heap is O(n)\n    # Repeatedly extracting the min element is O(log n), done n times\n    heapq.heapify(input_list)\n    sorted_input_list = []\n    while input_list:\n        sorted_input_list.append(heapq.heappop(input_list))\n    return sorted_input_list\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(2^n)_template1_10_f594",
+    "complexity_class": "O(2^n)",
+    "code": "# A simple implementation\n\ndef recursive_fibonacci(n):\n    # Each call branches into two more calls\n    if n <= 1:\n        return n\n    else:\n        return recursive_fibonacci(n - 1) + recursive_fibonacci(n - 2)\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(2^n)_template2_9_b7bb",
+    "complexity_class": "O(2^n)",
+    "code": "\ndef generate_all_subsets(data):\n    if not data:\n        return [[]]\n\n    first = data[0]\n    rest = data[1:]\n\n    subsets_without_first = generate_all_subsets(rest)\n    subsets_with_first = []\n\n    for subset in subsets_without_first:\n        subsets_with_first.append(subset + [first])\n\n    return subsets_without_first + subsets_with_first\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(logn)_template2_19_a62a",
+    "complexity_class": "O(log n)",
+    "code": "# A simple implementation\n\ndef find_power_of_two(n):\n    # This loop divides n by 2 in each iteration\n    i = 1\n    while i < n:\n        i *= 2\n    return i\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(logn)_template1_14_a758",
+    "complexity_class": "O(log n)",
+    "code": "\ndef binary_search(sorted_list, value):\n    # Each step halves the search space\n    low = 0\n    high = len(sorted_list) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if sorted_list[mid] == value:\n            return mid\n        elif sorted_list[mid] < value:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(logn)_template2_10_9025",
+    "complexity_class": "O(log n)",
+    "code": "# A simple implementation\n\ndef find_power_of_two(n):\n    # This loop divides n by 2 in each iteration\n    i = 1\n    while i < n:\n        i *= 2\n    return i\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(logn)_template1_17_649c",
+    "complexity_class": "O(log n)",
+    "code": "\ndef binary_search(sorted_list, value):\n    # Each step halves the search space\n    low = 0\n    high = len(sorted_list) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if sorted_list[mid] == value:\n            return mid\n        elif sorted_list[mid] < value:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template2_2_70f7",
+    "complexity_class": "O(n log n)",
+    "code": "\nimport heapq\n\ndef heap_sort(input_list):\n    # Building a heap is O(n)\n    # Repeatedly extracting the min element is O(log n), done n times\n    heapq.heapify(input_list)\n    sorted_input_list = []\n    while input_list:\n        sorted_input_list.append(heapq.heappop(input_list))\n    return sorted_input_list\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template2_5_02b2",
+    "complexity_class": "O(n log n)",
+    "code": "\nimport heapq\n\ndef heap_sort(input_list):\n    # Building a heap is O(n)\n    # Repeatedly extracting the min element is O(log n), done n times\n    heapq.heapify(input_list)\n    sorted_input_list = []\n    while input_list:\n        sorted_input_list.append(heapq.heappop(input_list))\n    return sorted_input_list\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(n^2)_template2_4_4a81",
+    "complexity_class": "O(n^2)",
+    "code": "# A simple implementation\n\ndef bubble_sort(data):\n    # The outer loop runs n times, and the inner loop runs up to n times\n    n = len(data)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if data[j] > data[j + 1]:\n                data[j], data[j + 1] = data[j + 1], data[j]\n    return data\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(n)_template2_18_adc9",
+    "complexity_class": "O(n)",
+    "code": "\ndef find_element_in_list(data, target):\n    # In the worst case, we have to check every element\n    index = 0\n    while index < len(data):\n        if data[index] == target:\n            return index\n        index += 1\n    return -1\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(1)_template1_22_bb9f",
+    "complexity_class": "O(1)",
+    "code": "# A simple implementation\n\ndef get_first_element(data):\n    # Accessing by index is a constant time operation\n    if data:\n        return data[0]\n    return None\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(1)_template1_5_18d6",
+    "complexity_class": "O(1)",
+    "code": "\ndef get_first_element(input_list):\n    # Accessing by index is a constant time operation\n    if input_list:\n        return input_list[0]\n    return None\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(n^2)_template2_12_7566",
+    "complexity_class": "O(n^2)",
+    "code": "\ndef bubble_sort(data):\n    # The outer loop runs n times, and the inner loop runs up to n times\n    n = len(data)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if data[j] > data[j + 1]:\n                data[j], data[j + 1] = data[j + 1], data[j]\n    return data\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(logn)_template1_18_49f6",
+    "complexity_class": "O(log n)",
+    "code": "\ndef binary_search(sorted_list, target):\n    # Each step halves the search space\n    low = 0\n    high = len(sorted_list) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if sorted_list[mid] == target:\n            return mid\n        elif sorted_list[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(logn)_template1_6_f3ff",
+    "complexity_class": "O(log n)",
+    "code": "\ndef binary_search(sorted_list, target):\n    # Each step halves the search space\n    low = 0\n    high = len(sorted_list) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if sorted_list[mid] == target:\n            return mid\n        elif sorted_list[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(n^2)_template2_17_d6c4",
+    "complexity_class": "O(n^2)",
+    "code": "\ndef bubble_sort(input_list):\n    # The outer loop runs n times, and the inner loop runs up to n times\n    n = len(input_list)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if input_list[j] > input_list[j + 1]:\n                input_list[j], input_list[j + 1] = input_list[j + 1], input_list[j]\n    return input_list\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(1)_template2_15_94fb",
+    "complexity_class": "O(1)",
+    "code": "\ndef perform_simple_calculation(a, b):\n    # Basic arithmetic operations are constant time\n    x = a * 2\n    y = b + 10\n    result = x - y\n    return result\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(1)_template2_2_0df6",
+    "complexity_class": "O(1)",
+    "code": "\ndef perform_simple_calculation(a, b):\n    # Basic arithmetic operations are constant time\n    x = a * 2\n    y = b + 10\n    result = x - y\n    return result\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(logn)_template1_12_92b7",
+    "complexity_class": "O(log n)",
+    "code": "\ndef binary_search(sorted_list, target):\n    # Each step halves the search space\n    low = 0\n    high = len(sorted_list) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if sorted_list[mid] == target:\n            return mid\n        elif sorted_list[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(1)_template2_6_1c2c",
+    "complexity_class": "O(1)",
+    "code": "\ndef perform_simple_calculation(a, b):\n    # Basic arithmetic operations are constant time\n    x = a * 2\n    y = b + 10\n    result = x - y\n    return result\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template1_18_cdeb",
+    "complexity_class": "O(n log n)",
+    "code": "\ndef merge_sort(data):\n    # Recursively dividing the list is O(log n)\n    # Merging the lists is O(n)\n    if len(data) > 1:\n        mid = len(data) // 2\n        left_half = data[:mid]\n        right_half = data[mid:]\n\n        merge_sort(left_half)\n        merge_sort(right_half)\n\n        i = j = k = 0\n        while i < len(left_half) and j < len(right_half):\n            if left_half[i] < right_half[j]:\n                data[k] = left_half[i]\n                i += 1\n            else:\n                data[k] = right_half[j]\n                j += 1\n            k += 1\n\n        while i < len(left_half):\n            data[k] = left_half[i]\n            i += 1\n            k += 1\n\n        while j < len(right_half):\n            data[k] = right_half[j]\n            j += 1\n            k += 1\n    return data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(2^n)_template1_24_ab2a",
+    "complexity_class": "O(2^n)",
+    "code": "\ndef recursive_fibonacci(n):\n    # Each call branches into two more calls\n    if n <= 1:\n        return n\n    else:\n        return recursive_fibonacci(n - 1) + recursive_fibonacci(n - 2)\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(n^2)_template2_5_e36c",
+    "complexity_class": "O(n^2)",
+    "code": "\ndef bubble_sort(input_list):\n    # The outer loop runs n times, and the inner loop runs up to n times\n    n = len(input_list)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if input_list[j] > input_list[j + 1]:\n                input_list[j], input_list[j + 1] = input_list[j + 1], input_list[j]\n    return input_list\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(n^2)_template2_2_c100",
+    "complexity_class": "O(n^2)",
+    "code": "\ndef bubble_sort(input_list):\n    # The outer loop runs n times, and the inner loop runs up to n times\n    n = len(input_list)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if input_list[j] > input_list[j + 1]:\n                input_list[j], input_list[j + 1] = input_list[j + 1], input_list[j]\n    return input_list\n",
+    "description": "This is an example of a quadratic time algorithm."
+  },
+  {
+    "id": "O(logn)_template2_14_a3b8",
+    "complexity_class": "O(log n)",
+    "code": "\ndef find_power_of_two(n):\n    # This loop divides n by 2 in each iteration\n    i = 1\n    while i < n:\n        i *= 2\n    return i\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template2_4_216a",
+    "complexity_class": "O(n log n)",
+    "code": "# A simple implementation\n\nimport heapq\n\ndef heap_sort(data):\n    # Building a heap is O(n)\n    # Repeatedly extracting the min element is O(log n), done n times\n    heapq.heapify(data)\n    sorted_data = []\n    while data:\n        sorted_data.append(heapq.heappop(data))\n    return sorted_data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(n)_template2_24_f4ae",
+    "complexity_class": "O(n)",
+    "code": "\ndef find_element_in_list(data, target):\n    # In the worst case, we have to check every element\n    index = 0\n    while index < len(data):\n        if data[index] == target:\n            return index\n        index += 1\n    return -1\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(1)_template2_4_4b43",
+    "complexity_class": "O(1)",
+    "code": "# A simple implementation\n\ndef perform_simple_calculation(a, b):\n    # Basic arithmetic operations are constant time\n    x = a * 2\n    y = b + 10\n    result = x - y\n    return result\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(logn)_template2_4_0cbd",
+    "complexity_class": "O(log n)",
+    "code": "# A simple implementation\n\ndef find_power_of_two(n):\n    # This loop divides n by 2 in each iteration\n    i = 1\n    while i < n:\n        i *= 2\n    return i\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(2^n)_template2_7_1d21",
+    "complexity_class": "O(2^n)",
+    "code": "# A simple implementation\n\ndef generate_all_subsets(data):\n    if not data:\n        return [[]]\n\n    first = data[0]\n    rest = data[1:]\n\n    subsets_without_first = generate_all_subsets(rest)\n    subsets_with_first = []\n\n    for subset in subsets_without_first:\n        subsets_with_first.append(subset + [first])\n\n    return subsets_without_first + subsets_with_first\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(logn)_template1_2_cf53",
+    "complexity_class": "O(log n)",
+    "code": "\ndef binary_search(sorted_list, value):\n    # Each step halves the search space\n    low = 0\n    high = len(sorted_list) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if sorted_list[mid] == value:\n            return mid\n        elif sorted_list[mid] < value:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(n)_template1_21_1542",
+    "complexity_class": "O(n)",
+    "code": "\ndef sum_list_elements(data):\n    # The loop runs once for each element in the list\n    total = 0\n    for item in data:\n        total += item\n    return total\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(1)_template2_25_15d1",
+    "complexity_class": "O(1)",
+    "code": "# A simple implementation\n\ndef perform_simple_calculation(a, b):\n    # Basic arithmetic operations are constant time\n    x = a * 2\n    y = b + 10\n    result = x - y\n    return result\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(logn)_template2_2_1b03",
+    "complexity_class": "O(log n)",
+    "code": "\ndef find_power_of_two(n):\n    # This loop divides n by 2 in each iteration\n    i = 1\n    while i < n:\n        i *= 2\n    return i\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(1)_template1_9_3d8b",
+    "complexity_class": "O(1)",
+    "code": "\ndef get_first_element(data):\n    # Accessing by index is a constant time operation\n    if data:\n        return data[0]\n    return None\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(2^n)_template2_21_a9c8",
+    "complexity_class": "O(2^n)",
+    "code": "\ndef generate_all_subsets(data):\n    if not data:\n        return [[]]\n\n    first = data[0]\n    rest = data[1:]\n\n    subsets_without_first = generate_all_subsets(rest)\n    subsets_with_first = []\n\n    for subset in subsets_without_first:\n        subsets_with_first.append(subset + [first])\n\n    return subsets_without_first + subsets_with_first\n",
+    "description": "This is an example of an exponential time algorithm."
+  },
+  {
+    "id": "O(logn)_template1_16_2bf0",
+    "complexity_class": "O(log n)",
+    "code": "# A simple implementation\n\ndef binary_search(sorted_list, target):\n    # Each step halves the search space\n    low = 0\n    high = len(sorted_list) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if sorted_list[mid] == target:\n            return mid\n        elif sorted_list[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template1_5_edf7",
+    "complexity_class": "O(n log n)",
+    "code": "\ndef merge_sort(input_list):\n    # Recursively dividing the list is O(log n)\n    # Merging the lists is O(n)\n    if len(input_list) > 1:\n        mid = len(input_list) // 2\n        left_half = input_list[:mid]\n        right_half = input_list[mid:]\n\n        merge_sort(left_half)\n        merge_sort(right_half)\n\n        i = j = k = 0\n        while i < len(left_half) and j < len(right_half):\n            if left_half[i] < right_half[j]:\n                input_list[k] = left_half[i]\n                i += 1\n            else:\n                input_list[k] = right_half[j]\n                j += 1\n            k += 1\n\n        while i < len(left_half):\n            input_list[k] = left_half[i]\n            i += 1\n            k += 1\n\n        while j < len(right_half):\n            input_list[k] = right_half[j]\n            j += 1\n            k += 1\n    return input_list\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template2_25_b14d",
+    "complexity_class": "O(n log n)",
+    "code": "# A simple implementation\n\nimport heapq\n\ndef heap_sort(data):\n    # Building a heap is O(n)\n    # Repeatedly extracting the min element is O(log n), done n times\n    heapq.heapify(data)\n    sorted_data = []\n    while data:\n        sorted_data.append(heapq.heappop(data))\n    return sorted_data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(nlogn)_template2_21_a1cd",
+    "complexity_class": "O(n log n)",
+    "code": "\nimport heapq\n\ndef heap_sort(data):\n    # Building a heap is O(n)\n    # Repeatedly extracting the min element is O(log n), done n times\n    heapq.heapify(data)\n    sorted_data = []\n    while data:\n        sorted_data.append(heapq.heappop(data))\n    return sorted_data\n",
+    "description": "This is an example of a log-linear time algorithm."
+  },
+  {
+    "id": "O(logn)_template2_5_8e61",
+    "complexity_class": "O(log n)",
+    "code": "\ndef find_power_of_two(n):\n    # This loop divides n by 2 in each iteration\n    i = 1\n    while i < n:\n        i *= 2\n    return i\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(n)_template1_11_4217",
+    "complexity_class": "O(n)",
+    "code": "\ndef sum_list_elements(input_list):\n    # The loop runs once for each element in the list\n    total = 0\n    for item in input_list:\n        total += item\n    return total\n",
+    "description": "This is an example of a linear time algorithm."
+  },
+  {
+    "id": "O(1)_template1_24_3b2f",
+    "complexity_class": "O(1)",
+    "code": "\ndef get_first_element(data):\n    # Accessing by index is a constant time operation\n    if data:\n        return data[0]\n    return None\n",
+    "description": "This is an example of a constant time algorithm."
+  },
+  {
+    "id": "O(logn)_template1_24_09c6",
+    "complexity_class": "O(log n)",
+    "code": "\ndef binary_search(sorted_list, target):\n    # Each step halves the search space\n    low = 0\n    high = len(sorted_list) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if sorted_list[mid] == target:\n            return mid\n        elif sorted_list[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n",
+    "description": "This is an example of a logarithmic time algorithm."
+  },
+  {
+    "id": "O(2^n)_template1_20_927f",
+    "complexity_class": "O(2^n)",
+    "code": "\ndef recursive_fibonacci(n):\n    # Each call branches into two more calls\n    if n <= 1:\n        return n\n    else:\n        return recursive_fibonacci(n - 1) + recursive_fibonacci(n - 2)\n",
+    "description": "This is an example of an exponential time algorithm."
+  }
+]
